@@ -5,6 +5,14 @@
       <div>
         <h2 id="card-post-info-header"><%= post.title %></h2>
         <p id="card-post-info-content"><%= post.content %></p>
+
+        <p id="card-post-done"><strong> Status: </strong>
+          <% if post.done == false %>
+          <%= "Completed" %>
+          <% else %>
+          <%= "Still need a hand!" %>
+          <% end %>
+        </p>
       </div>
     </div>
   </div>

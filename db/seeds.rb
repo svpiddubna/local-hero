@@ -22,3 +22,4 @@ Question.destroy_all
 Question.create!(title: "Supermarket", content: "What's the best discounter here?", user: u1)
 
 Question.create!(title: "New events", content: "When is the next gathering?", user: u2)
+
