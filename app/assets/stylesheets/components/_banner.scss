@@ -1,0 +1,72 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 70vh;
+  box-shadow: 0px 0px 8px 2px #000000;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 38px;
+}
+
+.banner p {
+  font-size: 25px;
+  color: white;
+  opacity: .8;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner h3 {
+  color: white;
+}
+
+.landing-text {
+  text-align: center;
+}
+
+.banner a {
+  font-size: 20px;
+  color: white;
+}
+
+
+.fa-mobile {
+  color: black;
+  font-size: 60px;
+}
+
+.fa-users {
+  color: black;
+  font-size: 60px;
+}
+
+.fa-question {
+  color: black;
+  font-size: 60px;
+}
+
+.how-it-works {
+  text-align: center;
+}
+
+.icon-card {
+  background-color: white;
+  margin: 10px;
+  padding: 30px;
+}
+
+.icon-card-header {
+  color: black;
+  opacity: .8;
+  font-size: 20px;
+}
+
+.icon-card-content {
+  color: black;
+  opacity: .6;
+  text-align: justify;
+}
