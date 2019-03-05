@@ -1,0 +1,23 @@
+.login {
+  background-image: url('https://images.pexels.com/photos/280221/pexels-photo-280221.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+  background-size: cover;
+  background-position: center;
+  padding: 140px 0;
+}
+.login-card {
+  // background-size: cover;
+  // background-position: center;
+  // height: 180px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // color: white;
+  // font-size: 24px;
+  // font-weight: bold;
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 40px;
+  padding: 18px;
+}
