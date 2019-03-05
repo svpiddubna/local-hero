@@ -5,8 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :posts
   has_many :comments
-  has_many :attendances
   has_many :tasks
   has_many :questions
   has_many :events
+
+  has_many :attendances
+  has_many :attended_events, -> { where(type: "Event") }, through: :attendances, source: :post
 end

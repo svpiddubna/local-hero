@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+u1 = User.create!(email: "ann@example.com", password: '111111')
+u2 = User.create!(email: "david@example.com", password: '111111')
+
+Task.destroy_all
+Task.create!(title: "Heavy fridge", content: 'Need help', user: u1)
+Task.create!(title: "Need some greenery in my apt", content: 'Will adopt your dying plants', user: u2)
+
+Event.destroy_all
+Event.create!(title: "BBQ in Treptower Park", content: "BYOB!", user: u2)
+
+Event.create!(title: "Yoga in Bellevue Park", content: "Sun salutations for all levels", user: u1)
+
+Question.destroy_all
+Question.create!(title: "Supermarket", content: "What's the best discounter here?", user: u1)
+
+Question.create!(title: "New events", content: "When is the next gathering?", user: u2)

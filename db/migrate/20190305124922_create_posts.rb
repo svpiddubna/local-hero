@@ -3,6 +3,9 @@ class CreatePosts < ActiveRecord::Migration[5.2]
     create_table :posts do |t|
       t.string :title
       t.text :content
+      t.boolean :done
+      t.datetime :starts_at
+      t.string :address
       t.string :type
       t.references :user, foreign_key: true
 
