@@ -1,0 +1,161 @@
+.label-abs {
+  position: absolute;
+  top: 30px;
+  left: 5px;
+  margin: 5px;
+  padding: 9px 15px;
+  text-align: center;
+
+}
+.card-post {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 290px;
+}
+
+.card-post > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-post h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-post p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.text-dec-none {
+  p {
+    color: #757575;
+  }
+  color: #30adcc;
+  text-decoration: none;
+   &:hover {
+      color: #27a1bc;
+      text-decoration: none;
+    }
+}
+
+.card-post .card-post-infos {
+  padding: 14px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  font-size: 40px;
+}
+
+.card-post-infos .card-post-user {
+  position: absolute;
+  right: 16px;
+  top: -50px;
+  width: 80px;
+}
+
+.card-post .card-post-pricing {
+  color: #2b2b2b;
+  position: absolute;
+  opacity: .7;
+  right: 34px;
+  top: 50px;
+}
+.avatar-bordered {
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+}
+
+
+.card-profile {
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ max-width: 400px;
+ margin: 30px 0 0 0;
+ padding: 0;
+ text-align: left;
+}
+
+.card-profile-text {
+  padding: 0 0 20px 30px;
+  position: relative;
+}
+
+.post-show-avatar {
+  position: absolute;
+  right: 16px;
+  top: -10px;
+  width: 120px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+}
+
+#card-post-info-header {
+  font-size: 20px;
+  padding: 0 0 5px 0;
+}
+
+#card-post-info-content {
+  font-size: 16px;
+  position: absolute;
+  top: 65px;
+  width: 430px;
+  height: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 7px 0 0 0;
+}
+
+#card-post-address {
+  font-size: 16px;
+  position: absolute;
+  top: 90px;
+  width: 430px;
+  height: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 7px 0 0 0;
+}
+
+#card-post-starts-at {
+  font-size: 16px;
+  position: absolute;
+  top: 105px;
+  width: 430px;
+  height: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 7px 0 0 0;
+}
+
+/* Grow */
+.hvr-grow {
+    // display: inline-block;
+    // vertical-align: middle;
+    // transform: translateZ(5px);
+    // box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    // backface-visibility: hidden;
+    // -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.19s;
+    // transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.05);
+}

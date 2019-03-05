@@ -1,0 +1,15 @@
+
+<%= link_to root_path,  class: "text-dec-none" do%>
+  <div class="card-post hvr-grow">
+    <div class="label label-info label-abs"><i class="fas fa-calendar-alt"> </i> <%= post.type %></div>
+    <div class="card-post-infos">
+      <div>
+        <h2 id="card-post-info-header"><%= post.title %></h2>
+        <p id="card-post-info-content"><%= post.content %></p>
+
+        <p id="card-post-address"><%= post.address %></p>
+        <p id="card-post-starts-at"><%= post.starts_at %></p>
+      </div>
+    </div>
+  </div>
+<% end %>
