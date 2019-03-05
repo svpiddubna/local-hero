@@ -2,6 +2,7 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  height: 70vh;
 }
 
 .banner h1 {
@@ -28,4 +29,25 @@
 
 .banner a {
   font-size: 20px;
+  color: white;
+}
+
+
+.fa-mobile {
+  color: black;
+  font-size: 60px;
+}
+
+.fa-users {
+  color: black;
+  font-size: 60px;
+}
+
+.fa-question {
+  color: black;
+  font-size: 60px;
+}
+
+.how-it-works {
+  text-align: center;
 }
