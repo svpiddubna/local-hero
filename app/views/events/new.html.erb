@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="card-form">
+    <div class="card-form-infos">
+      <%= render 'shared/tabs_new_post' %>
+      <p>Here you can add a new local gathering</p>
+        <%= simple_form_for(@event) do |f| %>
+          <%= f.input :title %>
+          <%= f.input :content %>
+          <%= f.input :starts_at %>
+          <%= f.input :address %>
+          <%= f.submit :submit, class: "btn btn-info" %>
+        <% end %>
+    </div>
+  </div>
+</div>
