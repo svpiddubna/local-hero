@@ -2,9 +2,8 @@
   <div class="card-form">
     <div class="card-form-infos">
       <%= render 'shared/tabs_new_post' %>
-      <!-- <h2>Ask for help</h2> -->
-      <p>Here you can ask your neighbours for help</p>
-      <%= simple_form_for(@task) do |f| %>
+      <p>Here you can ask your neighbours something</p>
+      <%= simple_form_for(@question) do |f| %>
       <%= f.input :title %>
       <%= f.input :content %>
       <%= f.submit :submit, class: "btn btn-info" %>
