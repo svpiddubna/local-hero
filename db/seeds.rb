@@ -10,13 +10,13 @@ u1 = User.create!(email: "ann@example.com", password: '111111')
 u2 = User.create!(email: "david@example.com", password: '111111')
 
 Task.destroy_all
-Task.create!(title: "Heavy fridge", content: 'Need help', user: u1)
-Task.create!(title: "Need some greenery in my apt", content: 'Will adopt your dying plants', user: u2)
+Task.create!(title: "Heavy fridge", content: 'Need help', done: true, user: u1)
+Task.create!(title: "Need some greenery in my apt", content: 'Will adopt your dying plants', done: false, user: u2)
 
 Event.destroy_all
-Event.create!(title: "BBQ in Treptower Park", content: "BYOB!", user: u2)
+Event.create!(title: "BBQ in Treptower Park", content: "BYOB!", address: "Checkpoint Charlie", starts_at: Time.zone.now.to_datetime , user: u2)
 
-Event.create!(title: "Yoga in Bellevue Park", content: "Sun salutations for all levels", user: u1)
+Event.create!(title: "Yoga in Bellevue Park", content: "Sun salutations for all levels", address: 'Treptower Park', starts_at: Time.zone.now.to_datetime , user: u2)
 
 Question.destroy_all
 Question.create!(title: "Supermarket", content: "What's the best discounter here?", user: u1)
