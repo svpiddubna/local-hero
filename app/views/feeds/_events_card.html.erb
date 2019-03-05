@@ -7,8 +7,8 @@
         <h2 id="card-post-info-header"><%= post.title %></h2>
         <p id="card-post-info-content"><%= post.content %></p>
 
-        <p id="card-post-address"><%= post.address %></p>
-        <p id="card-post-starts-at"><%= post.starts_at %></p>
+        <p id="card-post-address"> <strong> Where at: </strong> <%= post.address %></p>
+        <p id="card-post-starts-at"> <strong> When: </strong> <%= post.starts_at.to_s(:long) %></p>
       </div>
     </div>
   </div>
