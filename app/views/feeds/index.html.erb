@@ -2,9 +2,7 @@
 
   <h1> Posts Index Page </h1>
 
-  <h6 style="color:red"> Call to action button / to be completed </h6>
-
-  <%# <%= link_to "Create a new post", posts_path, class: "btn btn-primary" %>
+  <%= link_to "Create a new post", new_task_path, class: "btn btn-info" %>
 
   <div class='row'>
     <% @posts.each do |post| %>

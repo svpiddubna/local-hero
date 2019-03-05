@@ -121,7 +121,7 @@
 #card-post-address {
   font-size: 16px;
   position: absolute;
-  top: 90px;
+  top: 220px;
   width: 430px;
   height: 40px;
   text-overflow: ellipsis;
@@ -130,10 +130,23 @@
   margin: 7px 0 0 0;
 }
 
+#card-post-done {
+  font-size: 16px;
+  position: absolute;
+  top: 95px;
+  width: 430px;
+  height: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 7px 0 0 0;
+}
+
+
 #card-post-starts-at {
   font-size: 16px;
   position: absolute;
-  top: 105px;
+  top: 245px;
   width: 430px;
   height: 40px;
   text-overflow: ellipsis;
