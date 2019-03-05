@@ -1,7 +1,7 @@
 .label-abs {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 30px;
+  left: 5px;
   margin: 5px;
   padding: 9px 15px;
   text-align: center;
@@ -108,6 +108,8 @@
 
 #card-post-info-content {
   font-size: 16px;
+  position: absolute;
+  top: 65px;
   width: 430px;
   height: 40px;
   text-overflow: ellipsis;
@@ -115,6 +117,31 @@
   white-space: nowrap;
   margin: 7px 0 0 0;
 }
+
+#card-post-address {
+  font-size: 16px;
+  position: absolute;
+  top: 90px;
+  width: 430px;
+  height: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 7px 0 0 0;
+}
+
+#card-post-starts-at {
+  font-size: 16px;
+  position: absolute;
+  top: 105px;
+  width: 430px;
+  height: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 7px 0 0 0;
+}
+
 /* Grow */
 .hvr-grow {
     // display: inline-block;
