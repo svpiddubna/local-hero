@@ -2,11 +2,25 @@
 
   <h1> Posts Index Page </h1>
 
-  <%= link_to "Create a new post", new_task_path, class: "btn btn-info" %>
 
+  <%= link_to "Create a new post", new_task_path, class: "btn btn-info sticky-button" %>
   <div class='row'>
-    <% @posts.each do |post| %>
-    <div class="col-xs-12 col-md-6">
+    <div class="col-md-4">
+      <div class="card-filter text-dec-none sticky-filter">
+        <strong><h2 class="card-filter-infos" id="card-filter-info-header">Filter by: </h2></strong>
+        <p class="card-filter-inside"> Display All </p>
+        <p class="card-filter-inside"> Events </p>
+        <p class="card-filter-inside"> Tasks </p>
+        <p class="card-filter-inside"> Questions </p>
+      </div>
+      <div class="card-map text-dec-none sticky-map">
+        <strong><h2 class="card-map-infos" id="card-map-info-header">You are located here: </h2></strong>
+        <p class="card-map-inside"> There are 14 localheroes near you </p>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <% @posts.each do |post| %>
       <% if post.type == "Event" %>
       <%= render 'feeds/events_card', post: post %>
 
@@ -16,7 +30,9 @@
       <% else %>
       <%= render 'feeds/tasks_card', post: post %>
       <% end %>
+      <% end %>
     </div>
-    <% end %>
+
   </div>
 </div>
+

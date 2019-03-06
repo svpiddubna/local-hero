@@ -7,6 +7,7 @@
   text-align: center;
 
 }
+
 .card-post {
   position: relative;
   margin-top: 20px;
@@ -76,7 +77,6 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
-
 
 .card-profile {
  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -153,22 +153,4 @@
   overflow: hidden;
   white-space: nowrap;
   margin: 7px 0 0 0;
-}
-
-/* Grow */
-.hvr-grow {
-    // display: inline-block;
-    // vertical-align: middle;
-    // transform: translateZ(5px);
-    // box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    // backface-visibility: hidden;
-    // -moz-osx-font-smoothing: grayscale;
-    transition-duration: 0.19s;
-    // transition-property: transform;
-}
-
-.hvr-grow:hover,
-.hvr-grow:focus,
-.hvr-grow:active {
-    transform: scale(1.05);
 }

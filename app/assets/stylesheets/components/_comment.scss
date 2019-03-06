@@ -1,0 +1,42 @@
+.comment-card {
+  display: flex;
+  background-color: white;
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+
+  border-radius: 3px;
+  margin: 10px 0;
+}
+
+.comment-card .comment-card-header {
+  // border-bottom: 1px #EFF1F3 solid;
+  padding: 16px 16px;
+  // border-bottom-color: rgba(0, 0, 0, 0.18);
+  width: 100%;
+  p {
+    font-weight: bolder;
+    margin-bottom: 0;
+  }
+}
+
+.comment-card .comment-card-body {
+  padding: 16px 16px;
+  p {
+  margin-bottom: 0;
+  }
+}
+.comment-card-avatar {
+  margin: 8px 0;
+  padding: 16px 16px;
+  p {
+    font-weight: bolder;
+    text-align: center;
+    padding: 5px 0;
+  }
+}
+.comment-card-footer {
+  padding: 0 16px;
+  p {
+    font-size: 14px;
+    color: #CCCCCC;
+  }
+}

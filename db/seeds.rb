@@ -9,9 +9,9 @@ Task.destroy_all
 Event.destroy_all
 Question.destroy_all
 User.destroy_all
-u1 = User.create!(email: "ann@example.com", password: '111111', address: "Rudi-Dutschke-Straße 26, 10969 Berlin", first_name: "Ann", last_name: "Evans")
-u2 = User.create!(email: "david@example.com", password: '111111', address: "Markgrafenstraße 58, 10117 Berlin", first_name: "David", last_name: "Jones")
-
+u1 = User.create!(email: "ann@example.com", password: '111111', address: "Rudi-Dutschke-Str. 26, 10969 Berlin", first_name: "Ann", last_name: "Evans")
+u2 = User.create!(email: "david@example.com", password: '111111', address: "Markgrafenstr. 58, 10117 Berlin", first_name: "David", last_name: "Jones")
+u3 = User.create!(email: "maria@example.com", password: '111111', address: "Friedrichstr. 200, 10117 Berlin", first_name: "Maria", last_name: "Lopez")
 
 Task.create!(title: "Heavy fridge", content: 'Need help', done: true, user: u1)
 Task.create!(title: "Need some greenery in my apt", content: 'Will adopt your dying plants', done: false, user: u2)
@@ -24,5 +24,5 @@ Event.create!(title: "Yoga in Bellevue Park", content: "Sun salutations for all 
 
 Question.create!(title: "Supermarket", content: "What's the best discounter here?", user: u1)
 
-Question.create!(title: "New events", content: "When is the next gathering?", user: u2)
+Question.create!(title: "New events", content: "When is the next gathering?", user: u3)
 
