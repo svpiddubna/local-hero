@@ -11,4 +11,7 @@ class User < ApplicationRecord
 
   has_many :attendances
   has_many :attended_events, -> { where(type: "Event") }, through: :attendances, source: :post
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_address?
 end
