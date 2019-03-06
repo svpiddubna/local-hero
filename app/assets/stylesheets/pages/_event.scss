@@ -1,0 +1,36 @@
+.event-card-1 {
+  background-color: white;
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+
+  border-radius: 3px;
+  margin: 10px 0;
+}
+
+.event-card-1 > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.event-card-2 {
+  padding: 16px 16px;
+  background-color: white;
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+  border-radius: 3px;
+  margin: 8px 0;
+
+}
+.event-card-1 .event-card-body {
+  padding: 16px 16px;
+  p {
+    margin-bottom: 0;
+  }
+  h4 {
+    font-weight: bolder;
+  }
+}
+.event-card-2 .event-card-header {
+  p {
+    font-weight: bolder;
+  }
+}

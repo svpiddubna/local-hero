@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-4">
+      <div class="task-card">
+        <div class="task-card-avatar">
+          <%= image_tag "http://www.placehold.it/40x40", class: "rounded-circle", alt:"avatar", type: "image" %>
+          <p><%= @task.user.first_name %></p>
+        </div>
+
+        <div>
+          <div class="task-card-header">
+            <p><%= @task.title %></p>
+          </div>
+          <div class="task-card-body">
+            <p><%= @task.content %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
