@@ -1,4 +1,4 @@
-.question-card {
+.comment-card {
   display: flex;
   background-color: white;
   border: 1px rgba(0, 0, 0, 0.1) solid;
@@ -7,7 +7,7 @@
   margin: 10px 0;
 }
 
-.question-card .question-card-header {
+.comment-card .comment-card-header {
   // border-bottom: 1px #EFF1F3 solid;
   padding: 16px 16px;
   // border-bottom-color: rgba(0, 0, 0, 0.18);
@@ -18,13 +18,13 @@
   }
 }
 
-.question-card .question-card-body {
+.comment-card .comment-card-body {
   padding: 16px 16px;
   p {
   margin-bottom: 0;
   }
 }
-.question-card-avatar {
+.comment-card-avatar {
   margin: 8px 0;
   padding: 16px 16px;
   p {
@@ -33,11 +33,10 @@
     padding: 5px 0;
   }
 }
-.question-card-footer {
+.comment-card-footer {
   padding: 0 16px;
   p {
     font-size: 14px;
     color: #CCCCCC;
   }
 }
-

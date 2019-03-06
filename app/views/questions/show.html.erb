@@ -14,6 +14,12 @@
           <div class="question-card-body">
             <p><%= @question.content %></p>
           </div>
+          <div class="question-card-footer">
+            <p>Posted <%= @question.created_at.to_formatted_s(:long_ordinal) %></p>
+          </div>
+        </div>
+        <div class="question-card-upvote">
+          <!-- <i class="far fa-thumbs-up"></i> -->
         </div>
       </div>
     </div>
