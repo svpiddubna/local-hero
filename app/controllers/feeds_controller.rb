@@ -5,5 +5,4 @@ class FeedsController < ApplicationController
     @questions = Question.all
     @tasks = Task.all
   end
-
 end
