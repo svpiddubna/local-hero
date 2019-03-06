@@ -5,6 +5,7 @@
       <div>
         <h2 id="card-post-info-header"><%= post.title %></h2>
         <p id="card-post-info-content"><%= post.content %></p>
+        <%= cl_image_tag post.photo.url %>
       </div>
     </div>
   </div>
