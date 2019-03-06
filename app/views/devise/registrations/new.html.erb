@@ -43,6 +43,11 @@
                         required: true,
                         input_html: { autocomplete: "new-password" } %>
           </div>
+          <div class="col-xs-12 col-md-4">
+            <%= f.input :photo, input_html: { class: 'hidden' }, label_html:
+            { class: 'upload-photo'}, label: '📷 Upload a photo'%>
+            <%= f.input :photo_cache, as: :hidden %>
+          </div>
         </div>
       </div>
 

@@ -11,4 +11,5 @@ class User < ApplicationRecord
 
   has_many :attendances
   has_many :attended_events, -> { where(type: "Event") }, through: :attendances, source: :post
+  mount_uploader :photo, PhotoUploader
 end
