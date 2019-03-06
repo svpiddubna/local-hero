@@ -1,11 +1,11 @@
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link" href="/tasks/new">Ask for help</a>
+    <a class="nav-link <%= 'active' if params[:controller] == 'tasks'%>" href="/tasks/new">Ask for help</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/questions/new">Ask a question</a>
+    <a class="nav-link <%= 'active' if params[:controller] == 'questions'%>" href="/questions/new">Ask a question</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/events/new">Add event</a>
+    <a class="nav-link <%= 'active' if params[:controller] == 'events'%>" href="/events/new">Add event</a>
   </li>
 </ul>
