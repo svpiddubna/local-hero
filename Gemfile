@@ -16,6 +16,7 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'cloudinary', '~> 1.9.1'
 gem "geocoder"
 
 group :development do
