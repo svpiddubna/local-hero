@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :tasks, only: [:new, :create, :show]
   resources :questions, only: [:new, :create, :show]
   resources :events, only: [:new, :create, :show]
+  resources :posts, only: [] do
+    resources :comments, only: :create
+  end
 end

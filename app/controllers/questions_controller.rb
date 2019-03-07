@@ -1,6 +1,9 @@
 class QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
+    @comment = Comment.new
+    # For a comment form
+    @post = @question.becomes(Post)
   end
 
   def new

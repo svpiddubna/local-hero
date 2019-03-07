@@ -1,6 +1,8 @@
 class TasksController < ApplicationController
   def show
     @task = Task.find(params[:id])
+    @comment = Comment.new
+    @post = @task.becomes(Post)
   end
 
   def new
