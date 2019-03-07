@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-4">
+    <div class="col-xs-12 col-md-12">
       <div class="task-card">
         <div class="task-card-avatar">
           <%= image_tag "http://www.placehold.it/40x40", class: "rounded-circle", alt:"avatar", type: "image" %>
@@ -15,6 +15,27 @@
             <p><%= @task.content %></p>
             <p><%= @task.photo.url %></p>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="comments-section">
+    <div class="row">
+      <% @task.comments.each do |comment| %>
+        <div class="col-xs-12 col-md-12">
+          <%= render 'shared/comment', comment: comment %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div>
+          <%= simple_form_for([@post, @comment]) do |f| %>
+            <%= f.input :content %>
+            <%= f.submit "Post", class: "btn btn-info" %>
+          <% end %>
         </div>
       </div>
     </div>

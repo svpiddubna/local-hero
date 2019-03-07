@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   end
 
   root to: 'pages#home'
+  resources :posts, only: [] do
+    resources :comments, only: :create
+  end
   resources :feeds, path: :feed, only: [:index]
   resources :tasks, only: [:new, :create, :show, :index]
   resources :questions, only: [:new, :create, :show, :index]

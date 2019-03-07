@@ -1,25 +1,17 @@
-<div class="row">
-  <div class="col-xs-12 col-sm-6 col-sm-offset-4">
-    <div class="comment-card">
-      <div class="comment-card-avatar">
-        <%= image_tag "http://www.placehold.it/40x40", class: "rounded-circle", alt:"avatar", type: "image" %>
-        <p><%= comment.user.first_name %></p>
-      </div>
-      <div>
-        <div class="comment-card-header">
-          <p><%= comment.title %></p>
-        </div>
-        <div class="comment-card-body">
-          <p><%= comment.content %></p>
-        </div>
-          <div class="comment-card-footer">
-            <p>Posted <%= @comment.created_at.to_formatted_s(:long_ordinal) %></p>
-          </div>
-        </div>
-        <div class="comment-card-upvote">
-          <!-- <i class="far fa-thumbs-up"></i> -->
-        </div>
-      </div>
+<div class="comment-card">
+  <div class="comment-card-avatar">
+    <%= image_tag "http://www.placehold.it/40x40", class: "rounded-circle", alt:"avatar", type: "image" %>
+    <p><%= comment.user.first_name %></p>
+  </div>
+  <div>
+    <div class="comment-card-body">
+      <p><%= comment.content %></p>
+    </div>
+    <div class="comment-card-footer">
+      <p>Posted <%= comment.created_at.to_formatted_s(:long_ordinal) %></p>
+    </div>
+    <div class="comment-card-upvote">
+      <!-- <i class="far fa-thumbs-up"></i> -->
     </div>
   </div>
 </div>
