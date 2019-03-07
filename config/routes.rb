@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :comments, only: :create
   end
   resources :feeds, path: :feed, only: [:index]
-  resources :tasks, only: [:new, :create, :show, :index]
+  resources :tasks, only: [:new, :create, :show, :index, :update]
   resources :questions, only: [:new, :create, :show, :index]
   resources :events, only: [:new, :create, :show, :index]
 end
