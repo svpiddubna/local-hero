@@ -1,11 +1,13 @@
 class TasksController < ApplicationController
-  before_action :set_task, only [:update, :show]
+  before_action :set_task, only: [:update, :show]
 
   def index
     @tasks = Task.all
   end
 
   def update
+    @task.update(done: true)
+    redirect_to tasks_path
   end
 
 
