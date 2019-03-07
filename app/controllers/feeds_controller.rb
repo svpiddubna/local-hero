@@ -5,22 +5,12 @@ class FeedsController < ApplicationController
     @questions = Question.all
     @tasks = Task.all
 
-    @user = User.where.not(latitude: nil, longitude: nil)
-    @marker = @users.map do |user|
+    @users = User.where.not(latitude: nil, longitude: nil)
+    @markers = @users.map do |user|
       {
-        lng: flat.longitude,
-        lat: flat.latitude
+        lng: user.longitude,
+        lat: user.latitude
       }
-
   end
 end
-
-
-
-    @flats = Flat.where.not(latitude: nil, longitude: nil)
-
-    @markers = @flats.map do |flat|
-      {
-        lng: flat.longitude,
-        lat: flat.latitude
-      }
+end
