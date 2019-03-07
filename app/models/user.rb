@@ -16,4 +16,8 @@ class User < ApplicationRecord
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+
+  def upvote!
+    update(votes: votes + 1)
+  end
 end

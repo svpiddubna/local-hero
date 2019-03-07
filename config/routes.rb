@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   resources :tasks, only: [:new, :create, :show, :index]
   resources :questions, only: [:new, :create, :show, :index]
   resources :events, only: [:new, :create, :show, :index]
+
+  resources :users, only: [] do
+    resources :upvotes, only: :update
+  end
 end

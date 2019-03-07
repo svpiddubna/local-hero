@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-sm-offset-4">
+
       <div class="event-card-1">
           <%= cl_image_tag @event.photo.url %>
           <div class="event-card-body">
@@ -8,6 +9,7 @@
             <p><%= @event.starts_at.to_formatted_s(:long_ordinal) %></p>
             <p><%= @event.address %></p>
             <%= link_to "Going", "#", class: "btn btn-outline-secondary" %>
+            <%= render 'shared/upvote', comment: @event %>
           </div>
         </div>
         <div class="event-card-2">
@@ -17,6 +19,7 @@
           <p><%= @event.content %></p>
         </div>
       </div>
+
     </div>
   </div>
 </div>
