@@ -17,14 +17,24 @@
   font-size: 40px;
 }
 
+.card-filter .card-filter-infos .a {
+  text-decoration:none;
+  color: black !important;
+}
+
 .card-filter .card-filter-inside {
   padding: 6px 25px;
   display: flex;
   align-items: flex-end;
   position: relative;
   font-size: 14px;
-  font-weight: bolder;
+  text-decoration: none !important;
 }
+
+.card-filter-inside .p {
+  color: black;
+}
+
 
 #card-filter-info-header {
   font-size: 20px;

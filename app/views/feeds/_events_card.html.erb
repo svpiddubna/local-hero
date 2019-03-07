@@ -1,11 +1,11 @@
-
-<%= link_to root_path,  class: "text-dec-none" do%>
+<%= link_to event_path(post),  class: "text-dec-none" do%>
   <div class="card-post">
     <div class="label label-info label-abs"><i class="fas fa-calendar-alt"> </i> <%= post.type %></div>
     <div class="card-post-infos">
       <div>
         <h2 id="card-post-info-header"><%= post.title %></h2>
         <p id="card-post-info-content"><%= post.content %></p>
+        <%= cl_image_tag post.photo.url %>
 
         <p id="card-post-address"> <strong> Where at: </strong> <%= post.address %></p>
         <p id="card-post-starts-at"> <strong> When: </strong> <%= post.starts_at.to_s(:long_ordinal) %></p>

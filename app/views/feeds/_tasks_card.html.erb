@@ -1,10 +1,11 @@
-<%= link_to root_path,  class: "text-dec-none" do%>
+<%= link_to task_path(post),  class: "text-dec-none" do%>
   <div class="card-post">
     <div class="label label-info label-abs"><i class="fas fa-hammer"> </i> <%= post.type %></div>
     <div class="card-post-infos">
       <div>
         <h2 id="card-post-info-header"><%= post.title %></h2>
         <p id="card-post-info-content"><%= post.content %></p>
+        <p><%= cl_image_tag post.photo.url %></p>
 
         <p id="card-post-done"><strong> Status: </strong>
           <% if post.done == false %>

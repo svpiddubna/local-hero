@@ -5,8 +5,4 @@ class FeedsController < ApplicationController
     @questions = Question.all
     @tasks = Task.all
   end
-
-  def show
-    @post = Post.find(params[:id])
-  end
 end
