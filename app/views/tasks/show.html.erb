@@ -15,6 +15,12 @@
             <p><%= @task.content %></p>
             <p><%= @task.photo.url %></p>
           </div>
+
+        <% if (@task.done != true) && (current_user.id == @task.user_id) %>
+        <%= link_to("Mark as done?", task_path, :method => :patch, :confirm => "Are you sure?", class: "btn btn-info") %>
+        <% else %>
+        <% end %>
+
         </div>
       </div>
     </div>

@@ -9,11 +9,18 @@
 
         <p id="card-post-done"><strong> Status: </strong>
           <% if task.done == false %>
-          <%= "Completed" %>
+          <%= "Still need a local hero" %>
           <% else %>
-          <%= "Still need a hand!" %>
+          <%= "Phew! Completed" %>
           <% end %>
         </p>
+
+        <% if task.photo? %>
+        <%= cl_image_tag task.photo, :class => "post_image" %>
+        <% else %>
+        <%= image_tag "https://images.unsplash.com/photo-1526891993611-eca1e7d7b582?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80", :class => "post_image" %>
+        <% end %>
+
       </div>
     </div>
   </div>
