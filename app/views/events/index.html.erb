@@ -7,8 +7,8 @@
     <div class="col-md-4">
       <div class="card-filter text-dec-none sticky-filter">
         <strong><h2 class="card-filter-infos" id="card-filter-info-header">Filter by: </h2></strong>
-        <strong><p class="card-filter-inside"> <%= link_to "Display All", feeds_path %> </p></strong>
-        <p class="card-filter-inside"> <%= link_to "Events", events_path %> </p>
+        <p class="card-filter-inside"> <%= link_to "Display All", feeds_path %> </p>
+        <strong><p class="card-filter-inside"> <%= link_to "Events", events_path %> </p></strong>
         <p class="card-filter-inside"> <%= link_to "Tasks", tasks_path %></p>
         <p class="card-filter-inside"> <%= link_to "Questions", questions_path %> </p>
       </div>
@@ -19,16 +19,8 @@
     </div>
 
     <div class="col-md-8">
-      <% @posts.each do |post| %>
-      <% if post.type == "Event" %>
-      <%= render 'feeds/events_card', post: post %>
-
-      <% elsif post.type == "Question" %>
-      <%= render 'feeds/questions_card', post: post %>
-
-      <% else %>
-      <%= render 'feeds/tasks_card', post: post %>
-      <% end %>
+      <% @events.each do |event| %>
+      <%= render 'events/events_only_card', event: event %>
       <% end %>
     </div>
 

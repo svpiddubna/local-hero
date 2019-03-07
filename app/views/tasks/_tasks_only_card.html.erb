@@ -1,0 +1,20 @@
+
+<%= link_to task_path(task),  class: "text-dec-none" do%>
+  <div class="card-post">
+    <div class="label label-info label-abs"><i class="fas fa-hammer"> </i> <%= task.type %></div>
+    <div class="card-post-infos">
+      <div>
+        <h2 id="card-post-info-header"><%= task.title %></h2>
+        <p id="card-post-info-content"><%= task.content %></p>
+
+        <p id="card-post-done"><strong> Status: </strong>
+          <% if task.done == false %>
+          <%= "Completed" %>
+          <% else %>
+          <%= "Still need a hand!" %>
+          <% end %>
+        </p>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+
+<%= link_to event_path(event),  class: "text-dec-none" do%>
+  <div class="card-post">
+    <div class="label label-info label-abs"><i class="fas fa-calendar-alt"> </i> <%= event.type %></div>
+    <div class="card-post-infos">
+      <div>
+        <h2 id="card-post-info-header"><%= event.title %></h2>
+        <p id="card-post-info-content"><%= event.content %></p>
+
+        <p id="card-post-address"> <strong> Where at: </strong> <%= event.address %></p>
+        <p id="card-post-starts-at"> <strong> When: </strong> <%= event.starts_at.to_s(:long_ordinal) %></p>
+      </div>
+    </div>
+  </div>
+<% end %>

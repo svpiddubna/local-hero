@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
   resources :feeds, path: :feed, only: [:index]
-  resources :tasks, only: [:new, :create, :show]
-  resources :questions, only: [:new, :create, :show]
-  resources :events, only: [:new, :create, :show]
+  resources :tasks, only: [:new, :create, :show, :index]
+  resources :questions, only: [:new, :create, :show, :index]
+  resources :events, only: [:new, :create, :show, :index]
 end
