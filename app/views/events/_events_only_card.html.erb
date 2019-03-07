@@ -10,9 +10,9 @@
         <p id="card-post-address"> <strong> Where at: </strong> <%= event.address %></p>
         <p id="card-post-starts-at"> <strong> When: </strong> <%= event.starts_at.to_s(:long_ordinal) %></p>
     <% if event.photo? %>
-    <%= cl_image_tag event.photo, :class => "event_image" %>
+    <%= cl_image_tag event.photo, :class => "post_image" %>
     <% else %>
-    <%= image_tag "https://images.unsplash.com/photo-1484494789010-20fc1a011197?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80", :class => "event_image" %>
+    <%= image_tag "https://images.unsplash.com/photo-1484494789010-20fc1a011197?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80", :class => "post_image" %>
     <% end %>
       </div>
 
