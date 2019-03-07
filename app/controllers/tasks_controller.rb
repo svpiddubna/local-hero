@@ -1,9 +1,12 @@
 class TasksController < ApplicationController
+
   before_action :set_task, only: [:update, :show]
+
 
   def index
     @tasks = Task.all
   end
+
 
   def update
     @task.update(done: true)
@@ -23,7 +26,11 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     @task.user = current_user
-    @task.save
+    if @task.save
+      redirect_to task(@task)
+    else
+      render :new
+    end
   end
 
   private

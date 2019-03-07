@@ -44,3 +44,13 @@
     color: #CCCCCC;
   }
 }
+.comment-card-upvote {
+  a {
+    font-size: 18px;
+    color: #bababa;
+    &:hover {
+      color: #febb02;
+    }
+  }
+
+}
