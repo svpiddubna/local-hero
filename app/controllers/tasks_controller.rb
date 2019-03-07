@@ -7,7 +7,7 @@ class TasksController < ApplicationController
 
   def update
     @task.update(done: true)
-    redirect_to tasks_path
+    redirect_to task_path(@task)
   end
 
 
