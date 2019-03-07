@@ -18,6 +18,13 @@
   height: 290px;
 }
 
+.card-post:hover {
+  border-color: rgb(231,168,50);
+  border-style: solid;
+}
+
+
+
 .card-post > img {
   height: 200px;
   width: 100%;
