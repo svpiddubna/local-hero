@@ -8,6 +8,15 @@
 
 }
 
+.post_image {
+  width: 200px;
+  overflow: hidden;
+  position: absolute;
+  right: 40px;
+  top: 60px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
 .card-post {
   position: relative;
   margin-top: 20px;

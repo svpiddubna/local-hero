@@ -5,11 +5,17 @@
       <div>
         <h2 id="card-post-info-header"><%= post.title %></h2>
         <p id="card-post-info-content"><%= post.content %></p>
-        <%= cl_image_tag post.photo.url %>
 
         <p id="card-post-address"> <strong> Where at: </strong> <%= post.address %></p>
         <p id="card-post-starts-at"> <strong> When: </strong> <%= post.starts_at.to_s(:long_ordinal) %></p>
       </div>
+
+      <% if post.photo? %>
+      <%= cl_image_tag post.photo, :class => "post_image" %>
+      <% else %>
+      <%= image_tag "https://images.unsplash.com/photo-1526891993611-eca1e7d7b582?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80", :class => "post_image" %>
+      <% end %>
+
     </div>
   </div>
 <% end %>
