@@ -1,0 +1,12 @@
+
+<%= link_to question_path(question),  class: "text-dec-none" do%>
+  <div class="card-post">
+    <div class="label label-info label-abs"><i class="far fa-question-circle"> </i> <%= question.type %></div>
+    <div class="card-post-infos">
+      <div>
+        <h2 id="card-post-info-header"><%= question.title %></h2>
+        <p id="card-post-info-content"><%= question.content %></p>
+      </div>
+    </div>
+  </div>
+<% end %>
