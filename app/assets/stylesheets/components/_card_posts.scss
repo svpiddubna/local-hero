@@ -1,172 +1,201 @@
-.label-abs {
-  position: absolute;
-  top: 30px;
-  left: 5px;
-  margin: 5px;
-  padding: 9px 15px;
-  text-align: center;
-
+.label {
+  height: 40px;
+  width: 40px;
+  margin-right: 15px;
 }
+// .label-abs {
+//   position: absolute;
+//   top: 30px;
+//   left: 5px;
+//   margin: 5px;
+//   padding: 9px 15px;
+//   text-align: center;
+
+// }
 
 .post_image {
   width: 200px;
   overflow: hidden;
-  position: absolute;
-  right: 40px;
-  top: 60px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  // position: absolute;
+  // right: 40px;
+  // top: 60px;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .card-post {
-  position: relative;
   margin-top: 20px;
   margin-bottom: 20px;
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 290px;
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+  border-radius: 3px;
+  margin: 10px 0;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+  padding: 15px;
+  // &.event {
+  //   height: 200px;
+  // }
+  // &.task {
+  //   height: 200px;
+  // }
+  // &.question {
+  //   height: 180px;
+  // }
 }
 
 .card-post:hover {
-  border-color: rgb(231,168,50);
-  border-style: solid;
+  border-bottom: 3px solid #febb02;
+}
+.card-post-header {
+  display: flex;
 }
 
 
+// .card-post > img {
+//   height: 200px;
+//   width: 100%;
+//   object-fit: cover;
+// }
 
-.card-post > img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.card-post h2 {
-  font-size: 16px;
+.card-post-header {
+  h2 {
+  font-size: 20px;
   font-weight: bold;
-  margin: 0;
+  margin-top: 8px;
+  }
 }
 
-.card-post p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
+// .card-post p {
+//   font-size: 12px;
+//   opacity: .7;
+//   margin: 0;
+// }
 
 .text-dec-none {
   p {
-    color: #757575;
+    color: #565656;
   }
-  color: #30adcc;
+  color: #3f3f3f;
   text-decoration: none;
    &:hover {
-      color: #27a1bc;
+      color: #3f3f3f;
       text-decoration: none;
     }
 }
 
-.card-post .card-post-infos {
-  padding: 14px 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-  font-size: 40px;
-}
+// .card-post .card-post-infos {
+//   padding: 14px 25px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-end;
+//   position: relative;
+//   font-size: 40px;
+// }
 
-.card-post-infos .card-post-user {
-  position: absolute;
-  right: 16px;
-  top: -50px;
-  width: 80px;
-}
+// .card-post-infos .card-post-user {
+//   position: absolute;
+//   right: 16px;
+//   top: -50px;
+//   width: 80px;
+// }
 
-.card-post .card-post-pricing {
-  color: #2b2b2b;
-  position: absolute;
-  opacity: .7;
-  right: 34px;
-  top: 50px;
-}
-.avatar-bordered {
-  width: 40px;
-  border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
-}
+// .card-post .card-post-pricing {
+//   color: #2b2b2b;
+//   position: absolute;
+//   opacity: .7;
+//   right: 34px;
+//   top: 50px;
+// }
+// .avatar-bordered {
+//   width: 40px;
+//   border-radius: 50%;
+//   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+//   border: white 1px solid;
+// }
 
-.card-profile {
- box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
- max-width: 400px;
- margin: 30px 0 0 0;
- padding: 0;
- text-align: left;
-}
+// .card-profile {
+//  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+//  max-width: 400px;
+//  margin: 30px 0 0 0;
+//  padding: 0;
+//  text-align: left;
+// }
 
-.card-profile-text {
-  padding: 0 0 20px 30px;
-  position: relative;
-}
+// .card-profile-text {
+//   padding: 0 0 20px 30px;
+//   position: relative;
+// }
 
 .post-show-avatar {
-  position: absolute;
-  right: 16px;
-  top: -10px;
-  width: 120px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
+  margin-right: 15px;
 }
 
-#card-post-info-header {
-  font-size: 20px;
-  padding: 0 0 5px 0;
+.card-post-body {
+  p {
+    padding-top: 10px;
+  }
 }
-
-#card-post-info-content {
-  font-size: 16px;
-  position: absolute;
-  top: 65px;
-  width: 430px;
-  height: 40px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 7px 0 0 0;
+.card-post-footer {
+  display: flex;
+  align-items: center;
+  p {
+    margin-bottom: 0;
+  }
 }
+// #card-post-info-content {
+//   font-size: 16px;
+//   position: absolute;
+//   top: 65px;
+//   width: 430px;
+//   height: 40px;
+//   text-overflow: ellipsis;
+//   overflow: hidden;
+//   white-space: nowrap;
+//   margin: 7px 0 0 0;
+// }
 
-#card-post-address {
-  font-size: 16px;
-  position: absolute;
-  top: 220px;
-  width: 430px;
-  height: 40px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 7px 0 0 0;
-}
+// #card-post-address {
+//   font-size: 16px;
+//   position: absolute;
+//   top: 220px;
+//   width: 430px;
+//   height: 40px;
+//   text-overflow: ellipsis;
+//   overflow: hidden;
+//   white-space: nowrap;
+//   margin: 7px 0 0 0;
+// }
 
-#card-post-done {
-  font-size: 16px;
-  position: absolute;
-  top: 95px;
-  width: 430px;
-  height: 40px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 7px 0 0 0;
-}
+// #card-post-done {
+//   font-size: 16px;
+//   position: absolute;
+//   top: 95px;
+//   width: 430px;
+//   height: 40px;
+//   text-overflow: ellipsis;
+//   overflow: hidden;
+//   white-space: nowrap;
+//   margin: 7px 0 0 0;
+// }
 
 
-#card-post-starts-at {
-  font-size: 16px;
-  position: absolute;
-  top: 245px;
-  width: 430px;
-  height: 40px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 7px 0 0 0;
-}
+// #card-post-starts-at {
+//   font-size: 16px;
+//   position: absolute;
+//   top: 245px;
+//   width: 430px;
+//   height: 40px;
+//   text-overflow: ellipsis;
+//   overflow: hidden;
+//   white-space: nowrap;
+//   margin: 7px 0 0 0;
+// }
