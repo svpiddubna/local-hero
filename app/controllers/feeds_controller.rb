@@ -6,11 +6,16 @@ class FeedsController < ApplicationController
     @tasks = Task.all
 
     @users = User.where.not(latitude: nil, longitude: nil)
-    @markers = @users.map do |user|
-      {
-        lng: user.longitude,
-        lat: user.latitude
-      }
+    # @markers = @users.map do |user|
+    #   {
+    #     lng: user.longitude,
+    #     lat: user.latitude
+    #   }
+    # end
+    if current_user.latitude && current_user.longitude
+      @markers = [{ lng: current_user.longitude, lat: current_user.latitude }]
+    else
+      @markers = []
+    end
   end
-end
 end
