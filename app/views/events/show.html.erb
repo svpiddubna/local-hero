@@ -7,13 +7,18 @@
           <h4><%= @event.title %></h4>
           <p><%= @event.starts_at.to_formatted_s(:long_ordinal) %></p>
           <p><%= @event.address %></p>
-          <% if @event_attendance# %>
-            <%= link_to "Going" , attendance_path(@event_attendance), class: "going", method: :delete %>
-            <i class="far fa-calendar-check"></i>
-          <% else %>
-            <%= link_to "Going", event_attendances_path(@event),class: "btn btn-outline-secondary", method: :post %>
-          <% end %>
-
+         <div class="gridcontainer">
+            <% if @event_attendance# %>
+           <p><strong>You</strong> and <strong><%= @event.participants.count %></strong> neighbours are &nbsp</p>
+             <%= link_to "going" , attendance_path(@event_attendance), class: "going", method: :delete %>
+             &nbsp<i class="far fa-calendar-check"></i>
+         </div>
+         <div class="gridcontainer2">
+           <% else %>
+           <p><strong><%= @event.participants.count %></strong> neighbours are going!</p>
+             <p><%= link_to "I am going!", event_attendances_path(@event),class: "btn btn-outline-secondary", method: :post %></p>
+           <% end %>
+        </div>
         </div>
       </div>
       <div class="event-card-2">
