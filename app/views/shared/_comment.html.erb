@@ -1,6 +1,6 @@
 <div class="comment-card">
   <div class="comment-card-avatar">
-    <%= cl_image_tag comment.post.user.photo, class: "post-show-avatar" %>
+    <%= cl_image_tag comment.post.user.photo.url(:bright_face), class: "post-show-avatar" %>
     <p><%= comment.user.first_name %></p>
   </div>
   <div>

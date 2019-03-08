@@ -3,7 +3,7 @@
     <div class="col-xs-12 col-md-12">
       <div class="question-card">
         <div class="question-card-avatar">
-          <%= cl_image_tag @question.user.photo, class: "post-show-avatar" %>
+          <%= cl_image_tag @question.user.photo.url(:bright_face), class: "post-show-avatar" %>
           <p><%= @question.user.first_name %></p>
         </div>
         <div>
