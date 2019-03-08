@@ -1,27 +1,37 @@
-<%= link_to task_path(post),  class: "text-dec-none" do%>
-  <div class="card-post">
-    <div class="label label-info label-abs"><i class="fas fa-hammer"> </i> <%= post.type %></div>
-    <div class="card-post-infos">
-      <div>
-        <h2 id="card-post-info-header"><%= post.title %></h2>
-        <p id="card-post-info-content"><%= post.content %></p>
-        <p><%= cl_image_tag post.photo.url %></p>
 
-        <p id="card-post-done"><strong> Status: </strong>
-          <% if post.done == false %>
-          <%= "Completed" %>
-          <% else %>
-          <%= "Still need a hand!" %>
-          <% end %>
-        </p>
+<%= link_to task_path(post),  class: "text-dec-none" do %>
+  <div class="card-post task">
 
-        <% if post.photo? %>
-        <%= cl_image_tag post.photo, :class => "post_image" %>
-        <% else %>
-        <%= image_tag "https://images.unsplash.com/photo-1526891993611-eca1e7d7b582?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80", :class => "post_image" %>
-        <% end %>
 
+    <div class="card-post-content">
+      <div class="card-post-header">
+        <%= image_tag("task", class: "label") %>
+        <h2><%= post.title %></h2>
       </div>
+      <div class="card-post-body">
+          <p><%= post.content %></p>
+      </div>
+      <div class="card-post-footer">
+
+          <%= cl_image_tag post.user.photo, class: "post-show-avatar" %>
+
+          <p><%= post.user.first_name %></p>
+      </div>
+    </div>
+
+    <div class="card-post-photo">
+      <% if post.photo? %>
+      <%= cl_image_tag post.photo, class: "post_image" %>
+      <% else %>
+      <%= image_tag "https://images.unsplash.com/photo-1526891993611-eca1e7d7b582?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80", class: "post_image" %>
+      <% end %>
+      <p>
+        <% if post.done == false %>
+        <%= "Completed" %>
+        <% else %>
+        <%= "Still need a hand!" %>
+        <% end %>
+      </p>
     </div>
   </div>
 <% end %>
