@@ -4,25 +4,30 @@
       <div class="landing-text col-md-6 offset-md-3">
 
         <h1 id="landing-title">Local Hero</h1>
+        <br>
         <p>The easiest way to connect to your neighbours</p>
-        <a class="btn btn-info" href="#">Join now</a>
+        <br>
+        <%= link_to "Join the community", new_user_session_path,  class: "btn btn-info" %>
       </div>
     </div>
     <div class="row how-it-works">
       <div class="col icon-card">
           <br>
+          <%= image_tag "https://image.flaticon.com/icons/svg/1256/1256675.svg", class: "label" %>
           <span class="icon-card-header">Connect </span></p>
-          <div class="icon-card-content">Discover content only from <strong> people within 3km of your home</strong></div>
+          <div class="icon-card-content">Discover <strong> content only from people within 3km </strong> of your home</strong></div>
         </div>
         <div class="col icon-card">
             <br>
+            <%= image_tag "https://image.flaticon.com/icons/svg/1537/1537522.svg", class: "label" %>
             <span class="icon-card-header">Reach out</span></p>
-            <div class="icon-card-content">Need a hand? Hosting an event? Have a question? Localheroes are here for you </div>
+            <div class="icon-card-content"> Hosting a local get-together? <br> Need a hand? <br>  Unsure about something? </div>
           </div>
           <div class="col icon-card">
               <br>
+              <%= image_tag "https://image.flaticon.com/icons/svg/825/825574.svg", class: "label" %>
               <span class="icon-card-header">Earn a reputation</span></p>
-              <div class="icon-card-content">Upvote good samaritans or earn badges </div>
+              <div class="icon-card-content"><strong>Upvote good samaritans</strong> or become a local hero in your community </div>
               </div>
             </div>
           </div>

@@ -27,7 +27,7 @@
 .landing-text {
   text-align: center;
   position: relative;
-  bottom: 80px;
+  bottom: 30px;
 }
 
 .banner a {
@@ -53,32 +53,35 @@
 
 .how-it-works {
   text-align: center;
-  position: relative;
-  top: -50px;
   width: 100%;
+  margin: 0;
+  position: relative;
+  bottom: -30px;
 }
 
 .icon-card {
   background-color: white;
-  margin: 10px;
-  padding: 30px;
+  margin: 0 15px;
+  padding: 15px;
   border: 1px rgba(0, 0, 0, 0.1) solid;
   border-radius: 3px;
 }
 
 .icon-card-header {
+  // color: rgb(231,168,50);
   color: black;
+  font-weight: bolder;
   opacity: .8;
   font-size: 20px;
 }
 
 .icon-card-content {
   color: black;
-  opacity: .6;
-  text-align: justify;
+  opacity: .5;
+  text-align: center;
 }
 
 #landing-title {
-  font-size: 48px;
+  font-size: 60px;
   font-weight: bolder;
 }
