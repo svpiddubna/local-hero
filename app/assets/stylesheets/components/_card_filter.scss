@@ -1,23 +1,12 @@
 .card-filter {
-  margin: 10px 0;
-  a {
-    font-size: 16px;
-    color: #1c1c1c;
-    &:hover {
-      text-decoration: none;
-      color: #515151;
-    }
-  }
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 230px;
 }
-// .card-filter {
-//   position: relative;
-//   margin-top: 20px;
-//   margin-bottom: 20px;
-//   overflow: hidden;
-//   background: white;
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-//   height: 230px;
-// }
 
 .card-filter .card-filter-infos {
   padding: 14px 25px;
@@ -28,13 +17,12 @@
   font-size: 40px;
 }
 
-.card-filter .card-filter-infos a {
+.card-filter .card-filter-infos .a {
   text-decoration:none;
   color: black !important;
 }
 
-.card-filter-inside {
-
+.card-filter .card-filter-inside {
   padding: 6px 25px;
   display: flex;
   align-items: flex-end;
@@ -43,9 +31,8 @@
   text-decoration: none !important;
 }
 
-.card-filter-inside p {
+.card-filter-inside .p {
   color: black;
-  background-color: white;
 }
 
 

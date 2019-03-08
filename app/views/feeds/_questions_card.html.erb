@@ -1,22 +1,12 @@
-<%= link_to question_path(post),  class: "text-dec-none" do %>
-  <div class="card-post question">
-
-
-    <div class="card-post-content">
-      <div class="card-post-header">
-        <%= image_tag("question", class: "label") %>
-        <h2><%= post.title %></h2>
-      </div>
-      <div class="card-post-body">
-          <p><%= post.content %></p>
-      </div>
-      <div class="card-post-footer">
-
-          <%= cl_image_tag post.user.photo, class: "post-show-avatar" %>
-
-          <p><%= post.user.first_name %></p>
+<%= link_to question_path(post),  class: "text-dec-none" do%>
+  <div class="card-post">
+    <div class="label label-info label-abs"><i class="far fa-question-circle"> </i> <%= post.type %></div>
+    <div class="card-post-infos">
+      <div>
+        <h2 id="card-post-info-header"><%= post.title %></h2>
+        <p id="card-post-info-content"><%= post.content %></p>
+        <%= cl_image_tag post.photo.url %>
       </div>
     </div>
-
   </div>
 <% end %>

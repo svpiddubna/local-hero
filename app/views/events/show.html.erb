@@ -1,11 +1,10 @@
 <div class="container">
-  <%= render 'shared/sidebar'%>
-
+  <div class="row">
     <div class="col-xs-12 col-sm-8 col-sm-offset-4">
 
       <div class="event-card-1">
 
-        <%= cl_image_tag @event.photo %>
+        <%= image_tag "https://images.pexels.com/photos/903400/pexels-photo-903400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", alt:"event_photo", type: "image" %>
         <div class="event-card-body">
           <h4><%= @event.title %></h4>
           <p><%= @event.starts_at.to_formatted_s(:long_ordinal) %></p>

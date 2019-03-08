@@ -1,31 +1,21 @@
-<%= link_to event_path(post),  class: "text-dec-none" do %>
-  <div class="card-post event">
+<%= link_to event_path(post),  class: "text-dec-none" do%>
+  <div class="card-post">
+    <div class="label label-info label-abs"><i class="fas fa-calendar-alt"> </i> <%= post.type %></div>
+    <div class="card-post-infos">
+      <div>
+        <h2 id="card-post-info-header"><%= post.title %></h2>
+        <p id="card-post-info-content"><%= post.content %></p>
 
-
-    <div class="card-post-content">
-      <div class="card-post-header">
-        <%= image_tag("event", class: "label") %>
-        <h2><%= post.title %></h2>
+        <p id="card-post-address"> <strong> Where at: </strong> <%= post.address %></p>
+        <p id="card-post-starts-at"> <strong> When: </strong> <%= post.starts_at.to_s(:long_ordinal) %></p>
       </div>
-      <div class="card-post-body">
-          <p> <strong> Where at: </strong> <%= post.address %></p>
-          <p> <strong> When: </strong> <%= post.starts_at.to_s(:long_ordinal) %></p>
-      </div>
-      <div class="card-post-footer">
 
-          <%= cl_image_tag post.user.photo, class: "post-show-avatar" %>
-
-          <p><%= post.user.first_name %></p>
-      </div>
-    </div>
-
-    <div class="card-post-photo">
       <% if post.photo? %>
-      <%= cl_image_tag post.photo, class: "post_image" %>
+      <%= cl_image_tag post.photo, :class => "post_image" %>
       <% else %>
-      <%= image_tag "https://images.unsplash.com/photo-1526891993611-eca1e7d7b582?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80", class: "post_image" %>
+      <%= image_tag "https://images.unsplash.com/photo-1526891993611-eca1e7d7b582?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80", :class => "post_image" %>
       <% end %>
-      <p><%= post.participants.count %> neighbours are going</p>
+
     </div>
   </div>
 <% end %>
