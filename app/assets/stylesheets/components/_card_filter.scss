@@ -2,13 +2,14 @@
   margin: 10px 0;
   a {
     font-size: 16px;
-    color: #1c1c1c;
+    color: #191919;
     &:hover {
       text-decoration: none;
-      color: #515151;
+      color: #191919;
     }
   }
 }
+
 // .card-filter {
 //   position: relative;
 //   margin-top: 20px;
@@ -35,12 +36,15 @@
 
 .card-filter-inside {
 
-  padding: 6px 25px;
-  display: flex;
-  align-items: flex-end;
+  padding: 10px;
+  // display: flex;
+  // align-items: flex-end;
   position: relative;
-  font-size: 14px;
+  font-size: 15px;
   text-decoration: none !important;
+  &.active {
+    background-color: white;
+  }
 }
 
 .card-filter-inside p {
