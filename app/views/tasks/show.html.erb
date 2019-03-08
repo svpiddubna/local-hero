@@ -13,7 +13,7 @@
           </div>
           <div class="task-card-body">
             <p><%= @task.content %></p>
-            <p><%= @task.photo.url %></p>
+            <%= cl_image_tag @task.photo, class: "post_image" %>
           </div>
 
         <% if (@task.done != true) && (current_user.id == @task.user_id) %>
