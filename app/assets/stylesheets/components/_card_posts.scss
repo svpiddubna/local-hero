@@ -76,9 +76,6 @@
 // }
 
 .text-dec-none {
-  p {
-    color: #565656;
-  }
   color: #3f3f3f;
   text-decoration: none;
    &:hover {
@@ -149,6 +146,16 @@
   align-items: center;
   p {
     margin-bottom: 0;
+    color: #a5a5a5;
+    font-size: 15px;
+  }
+}
+.card-post-photo {
+  p {
+    margin-bottom: 0;
+    color: #a5a5a5;
+    font-size: 15px;
+    text-align: right;
   }
 }
 // #card-post-info-content {
