@@ -21,6 +21,11 @@
   position: sticky;
   top: 26px;
   z-index: 1;
+  &.wide-button {
+    color: white;
+
+  }
+    width: 100%;
 }
 
 .sticky-filter {
@@ -36,7 +41,7 @@
 }
 
 .card-map .card-map-inside {
-  padding: 0px 25px;
+  padding: 10px 0;
   display: flex;
   align-items: flex-end;
   position: relative;

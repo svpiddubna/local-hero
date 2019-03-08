@@ -13,8 +13,46 @@
 <body>
   <%= render 'shared/navbar_new' %>
   <%= render 'shared/flashes' %>
-  <%= yield %>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <%= render 'shared/sidebar'%>
+      </div>
+      <div class="col-9">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div >
+   <div class="sidebar">hello</div>
+    </div>
+    <div>
+
+    </div>
+    <div>
+  </div> -->
   <%= javascript_include_tag 'application' %>
   <%= javascript_pack_tag 'application' %>
 </body>
+
 </html>
+
+<!--
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div class="sidebar">
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="main content">
+          <div class="row">
+            <div class="col-md-4">
+          </div>
+        </div>
+      </div>
+      </div>
+</div>
+ -->

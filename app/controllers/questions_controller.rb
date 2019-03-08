@@ -2,6 +2,7 @@ class QuestionsController < ApplicationController
 
   def index
     @questions = Question.all
+    map_markers
   end
 
   def show
@@ -9,6 +10,7 @@ class QuestionsController < ApplicationController
     @comment = Comment.new
     # For a comment form
     @post = @question.becomes(Post)
+    map_markers
   end
 
   def new
@@ -26,6 +28,14 @@ class QuestionsController < ApplicationController
   end
 
   private
+
+  def map_markers
+    if current_user.latitude && current_user.longitude
+      @markers = [{ lng: current_user.longitude, lat: current_user.latitude }]
+    else
+      @markers = []
+    end
+  end
 
   def question_params
     params.require(:question).permit(:title, :content)
