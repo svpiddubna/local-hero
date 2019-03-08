@@ -13,7 +13,6 @@ class TasksController < ApplicationController
   def update
     @task.update(done: true)
     redirect_to task_path(@task)
-    render layout: "sidebar_layout"
   end
 
 
@@ -21,6 +20,7 @@ class TasksController < ApplicationController
     @comment = Comment.new
     @post = @task.becomes(Post)
     map_markers
+    render layout: "sidebar_layout"
   end
 
   def new
