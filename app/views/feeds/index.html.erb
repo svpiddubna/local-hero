@@ -1,19 +1,11 @@
-<div class='container'>
+<% @posts.each do |post| %>
+<% if post.type == "Event" %>
+<%= render 'feeds/events_card', post: post %>
 
-  <%= render 'shared/sidebar'%>
-    <div class="col-md-9">
-      <% @posts.each do |post| %>
-      <% if post.type == "Event" %>
-      <%= render 'feeds/events_card', post: post %>
+<% elsif post.type == "Question" %>
+<%= render 'feeds/questions_card', post: post %>
 
-      <% elsif post.type == "Question" %>
-      <%= render 'feeds/questions_card', post: post %>
-
-      <% else %>
-      <%= render 'feeds/tasks_card', post: post %>
-      <% end %>
-      <% end %>
-    </div>
-
-  </div>
-</div>
+<% else %>
+<%= render 'feeds/tasks_card', post: post %>
+<% end %>
+<% end %>

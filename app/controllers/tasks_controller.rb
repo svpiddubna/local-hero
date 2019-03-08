@@ -5,6 +5,7 @@ class TasksController < ApplicationController
 
   def index
     @tasks = Task.all
+    map_markers
   end
 
 
@@ -17,6 +18,7 @@ class TasksController < ApplicationController
   def show
     @comment = Comment.new
     @post = @task.becomes(Post)
+    map_markers
   end
 
   def new
@@ -34,6 +36,14 @@ class TasksController < ApplicationController
   end
 
   private
+
+  def map_markers
+    if current_user.latitude && current_user.longitude
+      @markers = [{ lng: current_user.longitude, lat: current_user.latitude }]
+    else
+      @markers = []
+    end
+  end
 
   def set_task
     @task = Task.find(params[:id])

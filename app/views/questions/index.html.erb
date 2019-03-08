@@ -1,13 +1,4 @@
-<div class='container'>
-
-  <%= render 'shared/sidebar'%>
-
-    <div class="col-md-9">
-      <% @questions.each do |question| %>
-      <%= render 'feeds/questions_card', post: question %>
-      <% end %>
-    </div>
-
-  </div>
-</div>
+<% @questions.each do |question| %>
+<%= render 'feeds/questions_card', post: question %>
+<% end %>
 
