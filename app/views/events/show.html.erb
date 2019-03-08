@@ -5,11 +5,14 @@
       <div class="event-card-1">
 
         <%= cl_image_tag @event.photo %>
+              <div class="date-card">
+                <p><i class="fas fa-calendar-day"></i><strong><%= @event.starts_at.to_time.strftime('%B %e') %></strong></p>
+              </div>
         <div class="event-information">
             <div class="event-card-body">
               <h4><%= @event.title %></h4>
-              <p><%= @event.address %></p>
-              <p><%= @event.starts_at.to_formatted_s(:long_ordinal) %></p>
+              <p><i class="fas fa-map-marker-alt"></i>&nbsp<%= @event.address %></p>
+              <p><i class="far fa-clock"></i><%= @event.starts_at.to_time.strftime('%l:%M %p') %></p>
               <% if @event_attendance %>
                 <%= link_to "Going" , attendance_path(@event_attendance), class: "going", method: :delete %>
                 &nbsp<i class="far fa-calendar-check"></i>
@@ -27,6 +30,7 @@
               <%= render 'shared/upvote', comment: @event %>
             </div>
 
+            <br>
             <br>
             <br>
             <div class="event-attendances">
