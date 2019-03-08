@@ -2,47 +2,33 @@
   <div class="container">
     <div class="row">
       <div class="landing-text col-md-6 offset-md-3">
-        <h1>Local Hero</h1>
+
+        <h1 id="landing-title">Local Hero</h1>
         <br>
-        <p>The easiest way to <br>connect to your neighbours</p>
+        <p>The easiest way to connect to your neighbours</p>
         <br>
-        <br>
-        <a class="btn btn-info" href="#">Join now</a>
+        <%= link_to "Join the community", new_user_session_path,  class: "btn btn-info" %>
       </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <div class="row how-it-works">
       <div class="col icon-card">
-        <p><i class="fas fa-mobile"></i>
           <br>
-        <span class="icon-card-header">Join neighbourhood</span></p>
-        <div class="icon-card-content">It's easy: Sign-up with your address and you already joined your
-        neighbourhood. You posts will only be seen by <strong>verified people within 1km</strong>
-      of your home.</div>
-      </div>
-      <div class="col icon-card">
-        <p><i class="fas fa-question"></i>
-          <br>
-        <span class="icon-card-header">Post something</span></p>
-        <div class="icon-card-content">Everyone needs a hand sometimes. Post <strong>questions</strong>, ask for <strong>help</strong> or create an <strong>event</strong>: 'Does
-        anyone know a good dentist nearby?', 'Can someone help me painting my flat?',
-      'I'm having a BBQ on Sunday, come around!'. </div>
-      </div>
-      <div class="col icon-card">
-        <p><i class="fas fa-users"></i>
-          <br>
-        <span class="icon-card-header">Get help from neighbours</span></p>
-        <div class="icon-card-content">Help is already on the way! You are looking for advice or could use
-          someone to help you with a certain task? Why not ask the person next door?
-        There is always <strong>somebody</strong> nearby that is <strong>willing</strong> to <strong>help</strong> <strong>you</strong>!</div>
-      </div>
-    </div>
-  </div>
-</div>
+          <%= image_tag "https://image.flaticon.com/icons/svg/1256/1256675.svg", class: "label" %>
+          <span class="icon-card-header">Connect </span></p>
+          <div class="icon-card-content">Discover <strong> content only from people within 3km </strong> of your home</strong></div>
+        </div>
+        <div class="col icon-card">
+            <br>
+            <%= image_tag "https://image.flaticon.com/icons/svg/1537/1537522.svg", class: "label" %>
+            <span class="icon-card-header">Reach out</span></p>
+            <div class="icon-card-content"> Hosting a local get-together? <br> Need a hand? <br>  Unsure about something? </div>
+          </div>
+          <div class="col icon-card">
+              <br>
+              <%= image_tag "https://image.flaticon.com/icons/svg/825/825574.svg", class: "label" %>
+              <span class="icon-card-header">Earn a reputation</span></p>
+              <div class="icon-card-content"><strong>Upvote good samaritans</strong> or become a local hero in your community </div>
+              </div>
+            </div>
+          </div>
+        </div>

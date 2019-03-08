@@ -1,12 +1,4 @@
-<div class='container'>
-  <%= render 'shared/sidebar'%>
-
-    <div class="col-md-9">
-      <% @tasks.each do |task| %>
-      <%= render 'feeds/tasks_card', post: task %>
-      <% end %>
-    </div>
-
-  </div>
-</div>
+<% @tasks.each do |task| %>
+<%= render 'feeds/tasks_card', post: task %>
+<% end %>
 

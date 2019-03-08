@@ -1,11 +1,3 @@
-<div class='container'>
-  <%= render 'shared/sidebar'%>
-    <div class="col-md-9">
-      <% @events.each do |event| %>
-      <%= render 'feeds/events_card', post: event %>
-      <% end %>
-    </div>
-
-  </div>
-</div>
-
+<% @events.each do |event| %>
+<%= render 'feeds/events_card', post: event %>
+<% end %>

@@ -1,24 +1,21 @@
-<div class='row'>
-  <div class="col-md-3">
-    <div class="card-filter sticky-filter">
-      <%= link_to "Create a new post", new_task_path, class: "btn btn-info sticky-button" %>
-      <!-- <strong><h2 class="card-filter-infos" id="card-filter-info-header">Filter by: </h2></strong> -->
-      <strong><p class="card-filter-inside"> <%= link_to "All", feeds_path %> </p></strong>
-      <p class="card-filter-inside"> <%= link_to "Events", events_path %> </p>
-      <p class="card-filter-inside"> <%= link_to "Tasks", tasks_path %></p>
-      <p class="card-filter-inside"> <%= link_to "Questions", questions_path %> </p>
-    </div>
-    <div class="card-map text-dec-none sticky-map">
-      <strong><h2 class="card-map-infos" id="card-map-info-header">You are located here: </h2></strong>
-        <% if @markers.present? %>
-        <div
-        id="map"
-        style="width: 100%;
-        height: 170px;"
-        data-markers="<%= @markers.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-        ></div>
-        <% end %>
-      <p class="card-map-inside"> There are 14 localheroes near you </p>
-    </div>
-  </div>
+<div class="card-filter sticky-filter">
+  <%= link_to "Create a new post", new_task_path, class: "btn btn-info sticky-button wide-button" %>
+  <!-- <strong><h2 class="card-filter-infos" id="card-filter-info-header">Filter by: </h2></strong> -->
+  <strong><h2 class="card-filter-inside"> <%= link_to "All", feeds_path %> </h2></strong>
+  <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'events'%>"> <%= link_to "Events", events_path %> </h3>
+  <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'tasks'%>"> <%= link_to "Tasks", tasks_path %></h3>
+  <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'questions'%>"> <%= link_to "Questions", questions_path %> </h3>
+<div class="card-map text-dec-none sticky-map">
+  <strong><h2 class="card-map-infos" id="card-map-info-header">You are located here: </h2></strong>
+    <% if @markers.present? %>
+    <div
+    id="map"
+    style="width: 100%;
+    height: 170px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+    <% end %>
+  <p class="card-map-inside"> There are 14 localheroes near you </p>
+</div>
+</div>
