@@ -38,15 +38,17 @@
   }
 }
 .comment-card-footer {
-  padding: 0 16px;
+  padding: 16px 0 0 16px;
   p {
     font-size: 14px;
     color: #CCCCCC;
   }
 }
 .comment-card-upvote {
+  padding-right: 15px;
+  padding-top: 15px;
   a {
-    font-size: 18px;
+    font-size: 20px;
     color: #bababa;
     &:hover {
       color: #febb02;

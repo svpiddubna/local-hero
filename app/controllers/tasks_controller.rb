@@ -6,12 +6,14 @@ class TasksController < ApplicationController
   def index
     @tasks = Task.all
     map_markers
+    render layout: "sidebar_layout"
   end
 
 
   def update
     @task.update(done: true)
     redirect_to task_path(@task)
+    render layout: "sidebar_layout"
   end
 
 
@@ -23,6 +25,7 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
+    map_markers
   end
 
   def create
