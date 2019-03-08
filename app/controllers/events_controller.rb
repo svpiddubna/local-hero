@@ -2,16 +2,19 @@ class EventsController < ApplicationController
   def index
     @events = Event.all
     map_markers
+    render layout: "sidebar_layout"
   end
 
   def show
     @event = Event.find(params[:id])
     @event_attendance = @event.attendances.find_by(user: current_user)
     map_markers
+    render layout: "sidebar_layout"
   end
 
   def new
     @event = Event.new
+    map_markers
   end
 
   def create

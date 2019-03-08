@@ -10,9 +10,9 @@
     <div class="comment-card-footer">
       <p>Posted <%= comment.created_at.to_formatted_s(:long_ordinal) %></p>
     </div>
-    <div class="comment-card-upvote">
+  </div>
+  <div class="comment-card-upvote">
       <%= render 'shared/upvote', comment: comment %>
-    </div>
   </div>
 </div>
 

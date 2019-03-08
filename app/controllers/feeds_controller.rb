@@ -14,8 +14,10 @@ class FeedsController < ApplicationController
     # end
     if current_user.latitude && current_user.longitude
       @markers = [{ lng: current_user.longitude, lat: current_user.latitude }]
+
     else
       @markers = []
     end
+    render layout: "sidebar_layout"
   end
 end

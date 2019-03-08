@@ -3,6 +3,7 @@ class QuestionsController < ApplicationController
   def index
     @questions = Question.all
     map_markers
+    render layout: "sidebar_layout"
   end
 
   def show
@@ -11,10 +12,12 @@ class QuestionsController < ApplicationController
     # For a comment form
     @post = @question.becomes(Post)
     map_markers
+    render layout: "sidebar_layout"
   end
 
   def new
     @question = Question.new
+    map_markers
   end
 
   def create
