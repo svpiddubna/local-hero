@@ -29,20 +29,31 @@
   h4 {
     font-weight: bolder;
   }
+
 }
+
+.white-text {
+    color: white;
+  }
 .event-card-2 .event-card-header {
   p {
     font-weight: bolder;
   }
 }
 
-.fa-calendar-check {
-  color: green;
-  font-size: 20px;
-}
+// .fa-calendar-check {
+//   color: green;
+//   font-size: 20px;
+
+// }
 
 .going {
-  color: green;
+  color: #212528;
+  text-decoration: none;
+  &:hover {
+    color: #848484;
+    text-decoration: none;
+  }
 }
 
 .gridcontainer {

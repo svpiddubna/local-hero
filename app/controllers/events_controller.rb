@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all
+    @events = Event.all.order(created_at: :desc)
     map_markers
     render layout: "sidebar_layout"
   end
@@ -8,6 +8,8 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @event_attendance = @event.attendances.find_by(user: current_user)
+    @comment = Comment.new
+    @post = @event.becomes(Post)
     map_markers
     render layout: "sidebar_layout"
   end

@@ -1,49 +1,30 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-12">
-      <div class="task-card">
-        <div class="task-card-avatar">
-          <%= cl_image_tag @task.user.photo.url(:bright_face), class: "post-show-avatar" %>
-          <p><%= @task.user.first_name %></p>
-        </div>
-
-        <div>
-          <div class="task-card-header">
-            <p><%= @task.title %></p>
-          </div>
-          <div class="task-card-body">
-            <p><%= @task.content %></p>
-            <%= cl_image_tag @task.photo, class: "post_image" %>
-          </div>
-
-        <% if (@task.done != true) && (current_user.id == @task.user_id) %>
-        <%= link_to("Mark as done?", task_path, :method => :patch, :confirm => "Are you sure?", class: "btn btn-info") %>
-        <% else %>
-        <% end %>
-
-        </div>
+<div class="row">
+  <div class="col-xs-12 col-md-12">
+    <div class="task-card">
+      <div class="task-card-avatar">
+        <%= cl_image_tag @task.user.photo.url(:bright_face), class: "post-show-avatar" %>
+        <p><%= @task.user.first_name %></p>
       </div>
-    </div>
-  </div>
 
-  <div class="comments-section">
-    <div class="row">
-      <% @task.comments.each do |comment| %>
-        <div class="col-xs-12 col-md-12">
-          <%= render 'shared/comment', comment: comment %>
+      <div>
+        <div class="task-card-header">
+          <p><%= @task.title %></p>
         </div>
+        <div class="task-card-body">
+          <p><%= @task.content %></p>
+          <%= cl_image_tag @task.photo, class: "post_image" %>
+        </div>
+
+      <% if (@task.done != true) && (current_user.id == @task.user_id) %>
+      <%= link_to("Mark as done?", task_path, :method => :patch, :confirm => "Are you sure?", class: "btn btn-info") %>
+      <% else %>
       <% end %>
-    </div>
 
-    <div class="row">
-      <div class="col-xs-12 col-md-12">
-        <div>
-          <%= simple_form_for([@post, @comment]) do |f| %>
-            <%= f.input :content %>
-            <%= f.submit "Post", class: "btn btn-info" %>
-          <% end %>
-        </div>
       </div>
     </div>
   </div>
 </div>
+<%= render 'shared/comments_section', task: @task, comment: @comment, post: @post %>
+
+
+

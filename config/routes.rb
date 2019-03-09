@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   end
 
   root to: 'pages#home'
+  get '/my_posts', to: 'feeds#user_index'
   resources :posts, only: [] do
     resources :comments, only: :create
   end

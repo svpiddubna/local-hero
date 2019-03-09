@@ -1,0 +1,11 @@
+<% @user_posts.each do |post| %>
+<% if post.type == "Event" %>
+<%= render 'feeds/events_card', post: post %>
+
+<% elsif post.type == "Question" %>
+<%= render 'feeds/questions_card', post: post %>
+
+<% else %>
+<%= render 'feeds/tasks_card', post: post %>
+<% end %>
+<% end %>
