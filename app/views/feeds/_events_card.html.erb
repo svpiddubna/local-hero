@@ -8,12 +8,13 @@
         <h2><%= post.title %></h2>
       </div>
       <div class="card-post-body">
-          <p> <strong> Where at: </strong> <%= post.address %></p>
-          <p> <strong> When: </strong> <%= post.starts_at.to_s(:long_ordinal) %></p>
+          <p><i class="fas fa-map-marker-alt">&nbsp</i><%= post.address %></p>
+          <p><i class="far fa-clock"></i> <%= post.starts_at.to_s(:long_ordinal) %></p>
+
       </div>
       <div class="card-post-footer">
 
-          <%= cl_image_tag post.user.photo.url(:bright_face), class: "post-show-avatar" %>
+          <%= cl_image_tag post.user.photo.url(:bright_face), class: "post-show-avatar inline" %>
 
           <p><%= post.user.first_name %></p>
       </div>
@@ -23,7 +24,7 @@
       <% if post.photo? %>
       <%= cl_image_tag post.photo, class: "post_image" %>
       <% else %>
-      <%= image_tag "https://images.unsplash.com/photo-1526891993611-eca1e7d7b582?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80", class: "post_image"  %>
+      <%= image_tag "https://images.unsplash.com/photo-1526891993611-eca1e7d7b582?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80", class: "post_image" %>
       <% end %>
       <p><%= post.participants.count %> neighbours are going</p>
     </div>

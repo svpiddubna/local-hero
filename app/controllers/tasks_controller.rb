@@ -4,7 +4,7 @@ class TasksController < ApplicationController
 
 
   def index
-    @tasks = Task.all
+    @tasks = Task.all.order(created_at: :desc)
     map_markers
     render layout: "sidebar_layout"
   end
