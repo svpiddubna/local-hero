@@ -4,6 +4,7 @@
         <div class="question-card-avatar">
           <%= cl_image_tag @question.user.photo.url(:bright_face), class: "post-show-avatar" %>
           <p><%= @question.user.first_name %></p>
+          <p><%= @question.user.votes %></p>
         </div>
         <div>
           <div class="question-card-header">
