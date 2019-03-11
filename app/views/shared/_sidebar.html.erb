@@ -9,39 +9,38 @@
 
   <div class="card-map text-dec-none sticky-map">
     <strong><h2 class="card-map-infos" id="card-map-info-header">You are located here: </h2></strong>
-<div class="card-map text-dec-none sticky-map">
-  <strong><h2 class="card-map-infos" id="card-map-info-header">Your neighbourhood </h2></strong>
-    <% if @markers.present? %>
-    <div
-    id="map"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-    ></div>
-    <% end %>
-    <p class="card-map-inside"> There are <%= User.count %> localheroes near you </p>
-  </div>
+    <div class="card-map text-dec-none sticky-map">
+      <strong><h2 class="card-map-infos" id="card-map-info-header">Your neighbourhood </h2></strong>
+      <% if @markers.present? %>
+      <div
+      id="map"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      ></div>
+      <% end %>
+      <p class="card-map-inside"> There are <%= User.count %> localheroes near you </p>
+    </div>
 
+    <div class="flip-card card-leaderboard sticky-leaderboard">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <strong><h2 class="card-leaderboard-infos" id="card-leaderboard-info-header">Top localheroes: </h2></strong>
+          <ol>
+            <% @top_localheroes.each do |localhero| %>
+            <li><strong><%= localhero.first_name %> <%= localhero.last_name %></strong> : <%= localhero.votes %> votes</li>
+            <% end %>
+          </ol>
+        </div>
 
-  <div class="flip-card card-leaderboard sticky-leaderboard">
-    <div class="flip-card-inner">
-
-      <div class="flip-card-front">
-        <strong><h2 class="card-leaderboard-infos" id="card-leaderboard-info-header">Top localheroes: </h2></strong>
-        <ol>
-          <% @top_localheroes.each do |localhero| %>
-          <li><strong><%= localhero.first_name %> <%= localhero.last_name %></strong> : <%= localhero.votes %> votes</li>
-          <% end %>
-        </ol>
-      </div>
-
-      <div class="flip-card-back">
-        <strong><h2 class="card-leaderboard-infos" id="card-leaderboard-info-header">Recently joined: </h2></strong>
-        <ol>
-        <% @recent_localheroes.each do |localhero| %>
-        <li><strong><%= localhero.first_name %> <%= localhero.last_name %></strong></li>
-        <% end %>
-        </ol>
+        <div class="flip-card-back">
+          <strong><h2 class="card-leaderboard-infos" id="card-leaderboard-info-header">Recently joined: </h2></strong>
+          <ol>
+            <% @recent_localheroes.each do |localhero| %>
+            <li><strong><%= localhero.first_name %> <%= localhero.last_name %></strong></li>
+            <% end %>
+          </ol>
+        </div>
       </div>
     </div>
+    </div>
   </div>
-</div>

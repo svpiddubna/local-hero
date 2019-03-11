@@ -46,6 +46,7 @@
             input_html: { autocomplete: "new-password" } %>
           </div>
         </div>
+
         <div class="row">
           <div class="col">
             <%= f.input :photo, input_html: { class: 'hidden' }, label_html:
@@ -53,6 +54,13 @@
             <%= f.input :photo_cache, as: :hidden %>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col">
+            <%= f.input :content, :label => "Write something about yourself",
+            input_html: { autocomplete: "content" }%>
+          </div>
+
       </div>
       <div class="row">
         <div class="form-actions">
