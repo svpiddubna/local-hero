@@ -7,6 +7,22 @@
   <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'questions'%>"> <%= link_to "Questions", questions_path %> </h3>
   <strong><h2 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'feeds' && params[:action] == 'user_index' %>"> <%= link_to "My posts", my_posts_path %> </h2></strong>
 
+<div class="card-map text-dec-none sticky-map">
+  <strong><h2 class="card-map-infos" id="card-map-info-header">Your neighbourhood </h2></strong>
+    <% if @markers.present? %>
+    <div
+
+    id="map"
+    data-markers="<%= @markers.to_json %>"
+    data-eventmarkers="<%= @eventmarkers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+    <% end %>
+
+  <p class="card-map-inside"> There are <%= User.count %> localheroes near you </p>
+</div>
+</div>
+
   <div class="card-map text-dec-none">
     <div class="card-map text-dec-none">
       <strong><h2 class="card-map-infos" id="card-map-info-header">Your neighbourhood </h2></strong>
