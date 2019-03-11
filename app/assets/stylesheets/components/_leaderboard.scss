@@ -1,0 +1,112 @@
+.card-leaderboard .card-leaderboard-infos {
+  padding: 14px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  font-size: 40px;
+}
+
+.sticky-button {
+  position: sticky;
+  top: 26px;
+  z-index: 1;
+  &.wide-button {
+    color: white;
+
+  }
+    width: 100%;
+}
+
+.sticky-filter {
+  position: sticky;
+  top: 85px;
+  z-index: 1;
+}
+
+.sticky-leaderboard {
+  position: sticky;
+  top: 330px;
+  z-index: 1;
+}
+
+.card-leaderboard .card-leaderboard-inside {
+  padding: 10px 0;
+  // display: flex;
+  // align-items: center;
+  text-align: center;
+  position: relative;
+  font-size: 12px;
+}
+
+#card-leaderboard-info-header {
+  font-size: 20px;
+  text-align: center;
+}
+
+.card-leaderboard h2 {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+
+.card-leaderboard li {
+  font-size: 14px;
+}
+
+.card-leaderboard p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 210px;
+  height: 130px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 3s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: rgb(234, 227, 213);
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: rgb(234, 227, 213);
+  color: black;
+  transform: rotateY(180deg);
+}
+
+#card.flipped {
+  transform: rotateY( 180deg);
+}
