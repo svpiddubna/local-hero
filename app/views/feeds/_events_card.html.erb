@@ -16,15 +16,16 @@
 
           <%= cl_image_tag post.user.photo.url(:bright_face), class: "post-show-avatar inline" %>
 
-          <p><%= post.user.first_name %></p>
-
-          <span id="user-content">
+          <div class="dropdown">
+            <span><p><%= post.user.first_name %></p></span>
+            <div class="dropdown-content">
               <% if post.user.content.nil? %>
-              <p> Sorry, no user information </p>>
+              <p> Sorry, I'm a bit private :)</p>
               <% else %>
-              <p><%= post.user.content %></p>
+              <p><strong> About me: </strong><%= post.user.content %></p>
               <% end %>
-          </span>
+            </div>
+          </div>
 
       </div>
     </div>
