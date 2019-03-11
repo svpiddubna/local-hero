@@ -3,3 +3,39 @@
   width: 50px;
   border-radius: 50%;
 }
+.fa-user {
+  font-size: 24px;
+  color: #494949;
+  &:hover {
+    color: #29ACE5;
+  }
+}
+.fa-bell {
+  font-size: 24px;
+  color: #494949;
+  position: relative;
+}
+.pad {
+  h3 {
+    padding-left: 20px;
+    margin-bottom: 0;
+  }
+}
+.fa-circle {
+  position: absolute;
+  font-size: 10px;
+  color: #29ACE5;
+  bottom: 15px;
+  left: 11px;
+}
+.dropdown-item {
+  font-size: 15px;
+}
+.navbar-logo {
+  color: #29ACE5;
+  font-weight: bold;
+  &:hover {
+    text-decoration: none;
+    color: #2195c6;
+  }
+}
