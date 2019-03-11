@@ -4,6 +4,11 @@ class Comment < ApplicationRecord
   validates :content, length: { minimum: 10 }
 
   def notify!(actor)
-    Notification.create(recipient: post.user, actor: actor, action: 'commented', post: post)
+    Notification.create(
+      recipient: post.user,
+      actor: actor,
+      action: 'commented',
+      post: post
+    ) unless post.user == actor
   end
 end

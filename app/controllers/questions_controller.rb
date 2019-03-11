@@ -1,10 +1,9 @@
 class QuestionsController < ApplicationController
-  include NotificationMarkAsReadable
+  layout "sidebar_layout", only: [:index, :show]
 
   def index
     @questions = Question.all.order(created_at: :desc)
     map_markers
-    render layout: "sidebar_layout"
   end
 
   def show
@@ -13,7 +12,6 @@ class QuestionsController < ApplicationController
     # For a comment form
     @post = @question.becomes(Post)
     map_markers
-    render layout: "sidebar_layout"
   end
 
   def new

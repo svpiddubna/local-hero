@@ -1,10 +1,9 @@
 class EventsController < ApplicationController
-  include NotificationMarkAsReadable
+  layout "sidebar_layout", only: [:index, :show]
 
   def index
     @events = Event.all.order(created_at: :desc)
     map_markers
-    render layout: "sidebar_layout"
   end
 
   def show
@@ -13,7 +12,6 @@ class EventsController < ApplicationController
     @comment = Comment.new
     @post = @event.becomes(Post)
     map_markers
-    render layout: "sidebar_layout"
   end
 
   def new

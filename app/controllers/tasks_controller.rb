@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  include NotificationMarkAsReadable
+  layout "sidebar_layout", only: [:index, :show]
 
   before_action :set_task, only: [:update, :show]
 
@@ -7,7 +7,6 @@ class TasksController < ApplicationController
   def index
     @tasks = Task.all.order(created_at: :desc)
     map_markers
-    render layout: "sidebar_layout"
   end
 
 
@@ -21,7 +20,6 @@ class TasksController < ApplicationController
     @comment = Comment.new
     @post = @task.becomes(Post)
     map_markers
-    render layout: "sidebar_layout"
   end
 
   def new
