@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  include NotificationMarkAsReadable
+
   def index
     @events = Event.all.order(created_at: :desc)
     map_markers

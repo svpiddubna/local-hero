@@ -13,6 +13,7 @@
       <div>
         <%= simple_form_for([post, comment]) do |f| %>
           <%= f.input :content, label: "Write a response" %>
+          <%= hidden_field_tag :origin_view, "#{controller_name.pluralize}/#{action_name}" %>
           <%= f.submit "Post", class: "btn btn-info white-text" %>
         <% end %>
       </div>

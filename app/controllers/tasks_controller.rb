@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  include NotificationMarkAsReadable
 
   before_action :set_task, only: [:update, :show]
 

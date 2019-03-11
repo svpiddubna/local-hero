@@ -1,4 +1,6 @@
 class QuestionsController < ApplicationController
+  include NotificationMarkAsReadable
+
   def index
     @questions = Question.all.order(created_at: :desc)
     map_markers
