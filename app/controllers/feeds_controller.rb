@@ -1,5 +1,5 @@
 class FeedsController < ApplicationController
-  before_action :localheroes, only: [:index, :show]
+  before_action :localheroes, only: [:index, :show, :user_index]
 
   def index
     @posts = Post.all.order(created_at: :desc)

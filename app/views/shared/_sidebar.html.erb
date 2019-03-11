@@ -17,13 +17,13 @@
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
       ></div>
       <% end %>
-      <p class="card-map-inside"> There are <%= User.count %> localheroes near you </p>
+      <p class="card-map-inside" style="font-size:12px"> There are <%= User.count %> localheroes near you </p>
     </div>
 
     <div class="flip-card card-leaderboard">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <strong><h2 class="card-leaderboard-infos" id="card-leaderboard-info-header">Top localheroes: </h2></strong>
+          <strong><h2 class="card-leaderboard-infos" id="card-leaderboard-info-header">Top localheroes:</h2></strong>
           <ol>
             <% @top_localheroes.each do |localhero| %>
             <li><strong><%= localhero.first_name %> <%= localhero.last_name %></strong> : <%= localhero.votes %> votes</li>

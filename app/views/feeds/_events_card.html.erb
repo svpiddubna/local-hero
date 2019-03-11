@@ -19,8 +19,11 @@
           <p><%= post.user.first_name %></p>
 
           <span id="user-content">
+              <% if post.user.content.nil? %>
+              <p> Sorry, no user information </p>>
+              <% else %>
               <p><%= post.user.content %></p>
-              <p>Testing12342432</p>
+              <% end %>
           </span>
 
       </div>
