@@ -1,8 +1,10 @@
 class QuestionsController < ApplicationController
+  layout "sidebar_layout", only: [:index, :show]
+  before_action :localheroes, only: [:index, :show]
+
   def index
     @questions = Question.all.order(created_at: :desc)
     map_markers
-    render layout: "sidebar_layout"
   end
 
   def show
@@ -11,7 +13,6 @@ class QuestionsController < ApplicationController
     # For a comment form
     @post = @question.becomes(Post)
     map_markers
-    render layout: "sidebar_layout"
   end
 
   def new
@@ -41,5 +42,11 @@ class QuestionsController < ApplicationController
 
   def question_params
     params.require(:question).permit(:title, :content)
+  end
+
+  def localheroes
+    # Methods for retrieving top and most recent localheroes
+    @top_localheroes = User.order('votes DESC').limit(3)
+    @recent_localheroes = User.order('created_at DESC').limit(3)
   end
 end

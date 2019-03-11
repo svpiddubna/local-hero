@@ -1,4 +1,7 @@
 class EventsController < ApplicationController
+  layout "sidebar_layout", only: [:index, :show]
+  before_action :localheroes, only: [:index, :show]
+
   def index
     @events = Event.order(created_at: :desc)
     @allevents = @events.near([current_user.latitude, current_user.longitude], 1)
@@ -10,7 +13,6 @@ class EventsController < ApplicationController
       }
     end
     map_markers
-    render layout: "sidebar_layout"
   end
 
   def show
@@ -19,7 +21,6 @@ class EventsController < ApplicationController
     @comment = Comment.new
     @post = @event.becomes(Post)
     map_markers
-    render layout: "sidebar_layout"
   end
 
   def new
@@ -49,5 +50,11 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:title, :photo, :content, :starts_at, :address)
+  end
+
+  def localheroes
+    # Methods for retrieving top and most recent localheroes
+    @top_localheroes = User.order('votes DESC').limit(3)
+    @recent_localheroes = User.order('created_at DESC').limit(3)
   end
 end
