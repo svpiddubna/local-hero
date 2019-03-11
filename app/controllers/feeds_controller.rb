@@ -1,16 +1,11 @@
 class FeedsController < ApplicationController
+  before_action :localheroes, only: [:index, :show, :user_index]
+
   def index
-
-    # Core methods
-
     @posts = Post.all.order(created_at: :desc)
     @events = Event.all.order(created_at: :desc)
     @questions = Question.all.order(created_at: :desc)
     @tasks = Task.all.order(created_at: :desc)
-
-    # Methods for retrieving top and most recent localheroes
-    @top_localheroes = User.order('votes DESC').limit(3)
-    @recent_localheroes = User.order('created_at DESC').limit(3)
 
     @users = User.where.not(latitude: nil, longitude: nil)
     # @markers = @users.map do |user|
@@ -44,5 +39,13 @@ class FeedsController < ApplicationController
       @markers = []
     end
     render layout: "sidebar_layout"
+  end
+
+  private
+
+  def localheroes
+    # Methods for retrieving top and most recent localheroes
+    @top_localheroes = User.order('votes DESC').limit(3)
+    @recent_localheroes = User.order('created_at DESC').limit(3)
   end
 end

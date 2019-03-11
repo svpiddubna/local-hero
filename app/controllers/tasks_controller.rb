@@ -1,7 +1,6 @@
 class TasksController < ApplicationController
-
   before_action :set_task, only: [:update, :show]
-
+  before_action :localheroes, only: [:index, :show]
 
   def index
     @tasks = Task.all.order(created_at: :desc)
@@ -9,12 +8,10 @@ class TasksController < ApplicationController
     render layout: "sidebar_layout"
   end
 
-
   def update
     @task.update(done: true)
     redirect_to task_path(@task)
   end
-
 
   def show
     @comment = Comment.new
@@ -54,5 +51,11 @@ class TasksController < ApplicationController
 
   def task_params
     params.require(:task).permit(:title, :content, :photo)
+  end
+
+  def localheroes
+    # Methods for retrieving top and most recent localheroes
+    @top_localheroes = User.order('votes DESC').limit(3)
+    @recent_localheroes = User.order('created_at DESC').limit(3)
   end
 end

@@ -148,6 +148,7 @@
 .card-post-footer {
   display: flex;
   align-items: center;
+  transition: 1.5s;
   p {
     margin-bottom: 0;
     color: #a5a5a5;
@@ -156,9 +157,6 @@
 
 }
 .card-post-footer-question {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
   p {
     margin-bottom: 0;
     color: #a5a5a5;
