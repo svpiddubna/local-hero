@@ -1,6 +1,14 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all.order(created_at: :desc)
+    @events = Event.order(created_at: :desc)
+    @allevents = @events.near([current_user.latitude, current_user.longitude], 1)
+    @eventmarkers = @allevents.map do |event|
+      {
+        lng: event.longitude,
+        lat: event.latitude,
+        infoWindow: render_to_string(partial: "infowindow")
+      }
+    end
     map_markers
     render layout: "sidebar_layout"
   end

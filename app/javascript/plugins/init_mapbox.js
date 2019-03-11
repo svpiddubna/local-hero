@@ -13,11 +13,15 @@ const buildMap = () => {
 
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
+    const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
+
     new mapboxgl.Marker()
     .setLngLat([ marker.lng, marker.lat ])
+    .setPopup(popup)
     .addTo(map);
   });
 };
+
 
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
@@ -51,8 +55,8 @@ const drawCircleRadius = (map, marker) => {
           ],
           base: 2
         },
-        "circle-color": "#fdb631",
-        "circle-opacity": 0.2
+        "circle-color": "#29ace5",
+        "circle-opacity": 0.3
       }
     });
   });
@@ -63,8 +67,10 @@ const initMapbox = () => {
   if (mapElement) {
     const map = buildMap();
     const markers = JSON.parse(mapElement.dataset.markers);
-    addMarkersToMap(map, markers);
-    fitMapToMarkers(map, markers);
+    const eventmarkers = JSON.parse(mapElement.dataset.eventmarkers);
+    // addMarkersToMap(map, markers);
+    addMarkersToMap(map, eventmarkers);
+    fitMapToMarkers(map, eventmarkers);
     drawCircleRadius(map, markers[0]);
   }
 };
