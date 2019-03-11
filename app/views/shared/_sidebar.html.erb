@@ -22,14 +22,14 @@
   </div>
 
 
-  <div class="flip-card card-leaderboard text-dec-none sticky-leaderboard">
+  <div class="flip-card card-leaderboard sticky-leaderboard">
     <div class="flip-card-inner">
 
       <div class="flip-card-front">
         <strong><h2 class="card-leaderboard-infos" id="card-leaderboard-info-header">Top localheroes: </h2></strong>
         <ol>
           <% @top_localheroes.each do |localhero| %>
-          <li><strong><%= localhero.first_name %> <%= localhero.last_name %></strong> : <%= localhero.votes %> Upvotes</li>
+          <li><strong><%= localhero.first_name %> <%= localhero.last_name %></strong> : <%= localhero.votes %> votes</li>
           <% end %>
         </ol>
       </div>
@@ -42,7 +42,6 @@
         <% end %>
         </ol>
       </div>
-
     </div>
   </div>
 </div>

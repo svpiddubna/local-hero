@@ -36,17 +36,24 @@
   // align-items: center;
   text-align: center;
   position: relative;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #card-leaderboard-info-header {
   font-size: 20px;
+  text-align: center;
 }
 
 .card-leaderboard h2 {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
+  text-align: center;
   margin: 0;
+}
+
+
+.card-leaderboard li {
+  font-size: 14px;
 }
 
 .card-leaderboard p {
@@ -57,8 +64,8 @@
 
 .flip-card {
   background-color: transparent;
-  width: 300px;
-  height: 200px;
+  width: 210px;
+  height: 130px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -69,14 +76,11 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.8s;
+  transition: transform 3s;
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
+/* Do an horizontal flip when you move the mouse over the flip box container
 
 /* Position the front and back side */
 .flip-card-front, .flip-card-back {
@@ -86,15 +90,23 @@
   backface-visibility: hidden;
 }
 
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
+  background-color: rgb(234, 227, 213);
   color: black;
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
-  color: white;
+  background-color: rgb(234, 227, 213);
+  color: black;
   transform: rotateY(180deg);
+}
+
+#card.flipped {
+  transform: rotateY( 180deg);
 }
