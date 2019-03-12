@@ -1,33 +1,34 @@
 <%= link_to question_path(post),  class: "text-dec-none" do %>
-  <div class="card-post question">
-    <div class="card-post-content">
-      <div class="card-post-header">
-        <%= image_tag("question.png", class: "label") %>
-        <h2><%= post.title %></h2>
-      </div>
-      <div class="card-post-body">
-          <p><%= post.content %></p>
-      </div>
-      <div class="card-post-footer-question">
-        <div class="card-post-footer">
-          <%= cl_image_tag post.user.photo.url(:bright_face), class: "post-show-avatar inline" %>
-
-          <div class="dropdown">
-            <span><p><%= post.user.first_name %></p></span>
-            <div class="dropdown-content">
-              <% if post.user.content.nil? %>
-              <p> Sorry, I'm a bit private :)</p>
-              <% else %>
-              <p><strong> About me: </strong><%= post.user.content %></p>
-              <% end %>
-            </div>
-          </div>
-
-        </div>
-        <div>
-          <p><%= post.comments.count %> answers</p>
-        </div>
-      </div>
+<div class="card-post question">
+  <div class="card-post-content">
+    <div class="card-post-header">
+      <%= image_tag("question.png", class: "label") %>
+      <h2><%= post.title %></h2>
     </div>
-  </div>
+    <div class="card-post-body">
+      <p><%= post.content %></p>
+    </div>
+    <div class="card-post-footer-question">
+      <div class="card-post-footer">
+        <%= cl_image_tag post.user.photo.url(:bright_face), class: "post-show-avatar inline" %>
+
+        <div class="dropdown">
+          <span><p><%= post.user.first_name %></p></span>
+          <div class="dropdown-content">
+            <% if post.user.content.nil? %>
+            <p> No information about me currently</p>
+            <% else %>
+            <p><strong> About me: </strong><%= post.user.content %></p>
+            <% end %>
+          </div>
+        </div>
+
+     </div>
+   </div>
+ </div>
+        <div class="card-post-photo answer-position">
+         <p><%= post.comments.count %> answers
+         </p>
+       </div>
+</div>
 <% end %>
