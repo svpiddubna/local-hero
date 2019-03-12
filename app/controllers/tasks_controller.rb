@@ -1,8 +1,8 @@
 class TasksController < ApplicationController
   include Mappable
+  include Localheroable
   layout "sidebar_layout", only: [:index, :show]
   before_action :set_task, only: [:update, :show]
-  before_action :localheroes, only: [:index, :show]
 
   def index
     @tasks = Task.all.order(created_at: :desc)
@@ -40,11 +40,5 @@ class TasksController < ApplicationController
 
   def task_params
     params.require(:task).permit(:title, :content, :photo)
-  end
-
-  def localheroes
-    # Methods for retrieving top and most recent localheroes
-    @top_localheroes = User.order('votes DESC').limit(3)
-    @recent_localheroes = User.order('created_at DESC').limit(3)
   end
 end
