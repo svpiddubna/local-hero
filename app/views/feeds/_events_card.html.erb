@@ -20,7 +20,7 @@
             <span><p><%= post.user.first_name %></p></span>
             <div class="dropdown-content">
               <% if post.user.content.nil? %>
-              <p> Sorry, I'm a bit private :)</p>
+              <p> No information about me currently</p>
               <% else %>
               <p><strong> About me: </strong><%= post.user.content %></p>
               <% end %>

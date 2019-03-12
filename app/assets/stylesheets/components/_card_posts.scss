@@ -166,14 +166,27 @@
 .check-green {
     color: #3e9b5a;
   }
+
 .card-post-photo {
-  p {
     margin-bottom: 0;
     color: #a5a5a5;
     font-size: 15px;
     text-align: right;
   }
+
+.card-post-photo.answer-position {
+  display:flex;
+  align-items:flex-end;
 }
+
+.card-post-photo.answer-position p{
+  margin:0;
+}
+
+.card-post-photo p{
+  margin:0;
+}
+
 // #card-post-info-content {
 //   font-size: 16px;
 //   position: absolute;
