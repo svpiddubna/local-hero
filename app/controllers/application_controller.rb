@@ -12,4 +12,16 @@ class ApplicationController < ActionController::Base
 
     devise_parameter_sanitizer.permit(:account_update, keys: [:username])
   end
+
+  protected
+
+  def resolve_layout
+    if controller_name =~ /events|tasks|questions/ && action_name =~ /index/
+      "sidebar_index"
+    elsif controller_name =~ /events|tasks|questions/ && action_name =~ /show/
+      "sidebar_layout_show"
+    else
+      "application"
+    end
+  end
 end

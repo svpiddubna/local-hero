@@ -1,6 +1,7 @@
 class FeedsController < ApplicationController
   include Mappable
   before_action :localheroes, only: [:index, :show, :user_index]
+  layout "sidebar_index"
 
   def index
     @posts = Post.all.order(created_at: :desc)
@@ -21,7 +22,6 @@ class FeedsController < ApplicationController
     else
       @markers = []
     end
-    render layout: "sidebar_layout"
   end
 
   def user_index
@@ -39,7 +39,6 @@ class FeedsController < ApplicationController
     else
       @markers = []
     end
-    render layout: "sidebar_layout"
   end
 
   private
