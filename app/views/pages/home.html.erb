@@ -1,4 +1,15 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1528605248644-14dd04022da1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+<div class="container-fluid">
+  <div class="navbar-landing">
+    <div>
+     <!--  <img src="https://cdn3.iconfinder.com/data/icons/human-behaviour-and-situations-part-1/400/Popular-19-512.png" alt="Logo" class="logo"> --><span class="local-hero">Local Hero</span>
+    </div>
+    <div>
+      <span><%= link_to "Login", new_user_session_path, class: "landing-login" %></span>
+    </div>
+
+  </div>
+</div>
   <div class="container">
     <div class="row">
       <div class="landing-text col-md-6 offset-md-3">
@@ -6,7 +17,7 @@
         <h1 id="landing-title">The easiest way to connect to your neighbours</h1>
         <br>
         <br>
-        <%= link_to "Meet your neighbours", new_user_session_path,  class: "btn btn-info join-button" %>
+        <%= link_to "Meet your neighbours", new_user_registration_path,  class: "btn btn-info join-button" %>
       </div>
     </div>
     <div class="row how-it-works">

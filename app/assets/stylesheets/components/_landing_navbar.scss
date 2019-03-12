@@ -1,0 +1,45 @@
+.navbar-landing {
+  display: flex;
+}
+
+.navbar-landing {
+  color: white;
+  position: relative;
+  top: -60px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-landing span {
+  font-size: 20px;
+  color: #fdb631;
+}
+
+.landing-login {
+  border: 2px solid #fdb631;
+  border-radius: 10%;
+  padding: 0px 8px;
+  text-decoration: none;
+}
+
+.banner a {
+  font-size: 20px;
+  color: white;
+}
+
+.banner a:hover {
+  text-decoration: none !important;
+  color: black;
+  background-color: #fdb631;
+}
+
+.logo {
+  color: #fdb631;
+  height: 20px;
+  width: 20px;
+}
+
+.local-hero {
+  font-family: 'Playball', cursive;
+  font-size: 30px !important;
+}
