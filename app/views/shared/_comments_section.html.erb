@@ -11,12 +11,17 @@
   <div class="row">
     <div class="col-xs-12 col-md-12">
       <div>
-        <%= simple_form_for([post, comment]) do |f| %>
-          <%= f.input :content, label: "Write a response" %>
+        <%= simple_form_for([post, comment], wrapper: :inline_form,
+  html: { class: "form-inline" }) do |f| %>
+          <%= f.input :content, input_html: {id: "editor"}, wrapper_html: {class: "editor-wrap"}, placeholder: "Write a response" %>
           <%= hidden_field_tag :origin_view, "#{controller_name}/#{action_name}" %>
-          <%= f.submit "Post", class: "btn btn-info white-text" %>
+          <%= f.submit "Post a response", class: "btn btn-info white-text" %>
         <% end %>
       </div>
     </div>
   </div>
 </div>
+<!-- click on write a response label
+select the label, input text area, button
+event listener - click on the label
+opacity 0 toggle class opacity 1 height 50px -->
