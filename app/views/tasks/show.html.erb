@@ -1,35 +1,35 @@
 <div class="row">
   <div class="col-xs-12 col-md-12">
     <div class="task-card">
-      <div class="task-card-avatar">
-        <%= cl_image_tag @task.user.photo.url(:bright_face), class: "post-show-avatar" %>
-        <p><%= @task.user.first_name %></p>
-        <p><%= @task.user.votes %></p>
+      <div class="task-card-left">
+        <div class="task-card-avatar">
+          <%= cl_image_tag @task.user.photo.url(:bright_face), class: "post-show-avatar" %>
+          <p><%= @task.user.first_name %></p>
+          <p><%= @task.user.votes %></p>
+        </div>
+        <div class="task-card-content">
+          <div class="task-card-header">
+            <p><%= @task.title %></p>
+          </div>
+          <div class="task-card-body">
+            <p><%= @task.content %></p>
+          </div>
+          <div class="question-card-footer">
+            <p>Posted <%= @task.created_at.to_formatted_s(:long_ordinal) %></p>
+          </div>
+        </div>
       </div>
-
       <div>
-        <div class="task-card-header">
-          <p><%= @task.title %></p>
-        </div>
-        <div class="task-card-body">
-          <p><%= @task.content %></p>
-        </div>
-        <div class="question-card-footer">
-          <p>Posted <%= @task.created_at.to_formatted_s(:long_ordinal) %></p>
+        <div class="task-card-right">
+          <%= cl_image_tag @task.photo, class: "post_image" %>
+          <% if (@task.done != true) && (current_user.id == @task.user_id) %>
+            <div class="task-card-right-bottom">
+              <%= link_to("Mark as complete?", task_path, :method => :patch, :confirm => "Are you sure?", class: "btn btn-info") %>
+            </div>
+          <% end %>
         </div>
       </div>
-
-      <div class="task-card-right">
-      <%= cl_image_tag @task.photo, class: "post_image" %>
-      <% if (@task.done != true) && (current_user.id == @task.user_id) %>
-      <%= link_to("Mark as complete?", task_path, :method => :patch, :confirm => "Are you sure?", class: "btn btn-info") %>
-      <% else %>
-      <% end %>
-    </div>
     </div>
   </div>
 </div>
-<%= render 'shared/comments_section', comment: @comment, post: @post %>
-
-
-
+<%= render 'shared/comments_section', task: @task, comment: @comment, post: @post %>
