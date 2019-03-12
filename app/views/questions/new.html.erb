@@ -1,11 +1,11 @@
 <div class="container">
-  <div class="card-form">
+  <div class="card-form question-trim">
     <div class="card-form-infos">
       <%= render 'shared/tabs_new_post' %>
-      <p>Here you can ask your neighbours something</p>
+      <em><p>Ask your neighbours something you are unsure about</p></em>
       <%= simple_form_for(@question) do |f| %>
-      <%= f.input :title %>
-      <%= f.input :content %>
+      <strong><%= f.input :title %></strong>
+      <strong><%= f.input :content, :label => "Description" %></strong>
       <%= f.submit :submit, class: "btn btn-info" %>
     <% end %>
     </div>

@@ -2,13 +2,14 @@
   <div class="card-form">
     <div class="card-form-infos">
       <%= render 'shared/tabs_new_post' %>
-      <p>Here you can add a new local gathering</p>
+      <em><p>Create a new local gathering for your community</p></em>
         <%= simple_form_for(@event) do |f| %>
-          <%= f.input :title %>
-          <%= f.input :content %>
-          <%= f.input :starts_at %>
-          <%= f.input :address %>
-          <%= f.input :photo  %>
+          <strong><%= f.input :title %></strong>
+          <strong><%= f.input :content, :label => "Description" %></strong>
+          <strong><%= f.input :starts_at, :label => "Your event begins at" %></strong>
+          <strong><%= f.input :address, :label => "Event location" %></strong>
+
+          <%= f.input :photo, input_html: { class: 'hidden' }, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
           <%= f.input :photo_cache, as: :hidden %>
           <%= f.submit :submit, class: "btn btn-info" %>
         <% end %>
