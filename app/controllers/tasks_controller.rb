@@ -1,11 +1,11 @@
 class TasksController < ApplicationController
+  include Mappable
   layout "sidebar_layout", only: [:index, :show]
   before_action :set_task, only: [:update, :show]
   before_action :localheroes, only: [:index, :show]
 
   def index
     @tasks = Task.all.order(created_at: :desc)
-    map_markers
   end
 
   def update
@@ -16,12 +16,10 @@ class TasksController < ApplicationController
   def show
     @comment = Comment.new
     @post = @task.becomes(Post)
-    map_markers
   end
 
   def new
     @task = Task.new
-    map_markers
   end
 
   def create
@@ -35,14 +33,6 @@ class TasksController < ApplicationController
   end
 
   private
-
-  def map_markers
-    if current_user.latitude && current_user.longitude
-      @markers = [{ lng: current_user.longitude, lat: current_user.latitude }]
-    else
-      @markers = []
-    end
-  end
 
   def set_task
     @task = Task.find(params[:id])
