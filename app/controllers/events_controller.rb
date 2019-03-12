@@ -9,7 +9,7 @@ class EventsController < ApplicationController
       {
         lng: event.longitude,
         lat: event.latitude,
-        infoWindow: render_to_string(partial: "infowindow")
+        infoWindow:  render_to_string(partial: 'shared/infowindow', locals: { event: event })
       }
     end
     map_markers
