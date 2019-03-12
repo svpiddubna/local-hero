@@ -19,10 +19,7 @@
       <div class="col-3">
         <%= render 'shared/sidebar'%>
       </div>
-      <div class="col-9 add-space-index">
-        <div class="button-right">
-        <%= link_to "Create a new post", new_task_path, class: "btn btn-info wide-button" %>
-        </div>
+      <div class="col-9 add-space-show">
         <%= yield %>
       </div>
     </div>
