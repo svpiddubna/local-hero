@@ -20,7 +20,8 @@ module Mappable
       {
         lng: event.longitude,
         lat: event.latitude,
-        infoWindow:  render_to_string(partial: 'shared/infowindow', locals: { event: event })
+        infoWindow:  render_to_string(partial: 'shared/infowindow', locals: { event: event }),
+        image_url: helpers.asset_url('mapmarker.png')
       }
     end
   end
