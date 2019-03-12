@@ -1,4 +1,5 @@
 class FeedsController < ApplicationController
+  include Mappable
   before_action :localheroes, only: [:index, :show, :user_index]
 
   def index
