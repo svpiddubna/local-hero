@@ -3,7 +3,6 @@ class EventsController < ApplicationController
   layout "sidebar_layout", only: [:index, :show]
   before_action :localheroes, only: [:index, :show]
 
-
   def index
     @events = Event.order(created_at: :desc)
   end
