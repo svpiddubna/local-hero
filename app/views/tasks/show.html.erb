@@ -4,6 +4,7 @@
       <div class="task-card-avatar">
         <%= cl_image_tag @task.user.photo.url(:bright_face), class: "post-show-avatar" %>
         <p><%= @task.user.first_name %></p>
+        <p><%= @task.user.votes %></p>
       </div>
 
       <div>
@@ -12,15 +13,19 @@
         </div>
         <div class="task-card-body">
           <p><%= @task.content %></p>
-          <%= cl_image_tag @task.photo, class: "post_image" %>
         </div>
+        <div class="question-card-footer">
+          <p>Posted <%= @task.created_at.to_formatted_s(:long_ordinal) %></p>
+        </div>
+      </div>
 
+      <div class="task-card-right">
+      <%= cl_image_tag @task.photo, class: "post_image" %>
       <% if (@task.done != true) && (current_user.id == @task.user_id) %>
-      <%= link_to("Mark as done?", task_path, :method => :patch, :confirm => "Are you sure?", class: "btn btn-info") %>
+      <%= link_to("Mark as complete?", task_path, :method => :patch, :confirm => "Are you sure?", class: "btn btn-info") %>
       <% else %>
       <% end %>
-
-      </div>
+    </div>
     </div>
   </div>
 </div>
