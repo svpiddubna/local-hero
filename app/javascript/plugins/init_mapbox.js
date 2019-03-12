@@ -78,7 +78,7 @@ const initMapbox = () => {
     const eventmarkers = JSON.parse(mapElement.dataset.eventmarkers);
     // addMarkersToMap(map, markers);
     addMarkersToMap(map, eventmarkers);
-    fitMapToMarkers(map, eventmarkers);
+    fitMapToMarkers(map, markers);
     drawCircleRadius(map, markers[0]);
   }
 };
