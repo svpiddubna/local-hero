@@ -1,13 +1,13 @@
 <div class="container">
-  <div class="card-form">
+  <div class="card-form help-trim">
     <div class="card-form-infos">
       <%= render 'shared/tabs_new_post' %>
       <!-- <h2>Ask for help</h2> -->
-      <p>Here you can ask your neighbours for help</p>
+      <em><p>Ask your neighbours for a hand with something</p></em>
       <%= simple_form_for(@task) do |f| %>
-      <%= f.input :title %>
-      <%= f.input :content %>
-      <%= f.input :photo  %>
+      <strong><%= f.input :title %></strong>
+      <strong><%= f.input :content, :label => "Description" %></strong>
+      <%= f.input :photo, input_html: { class: 'hidden' }, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
       <%= f.input :photo_cache, as: :hidden %>
       <%= f.submit :submit, class: "btn btn-info" %>
     <% end %>
