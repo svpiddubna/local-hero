@@ -13,9 +13,8 @@ Rails.application.routes.draw do
   resources :tasks, only: [:new, :create, :show, :index, :update]
   resources :questions, only: [:new, :create, :show, :index]
 
-  resources :users, only: [] do
-    resources :upvotes, only: :update
-  end
+  patch "/users/:id/upvotes", to: "upvotes#update", as: :user_upvote
+
   resources :events, only: [:new, :create, :show, :index] do
     resources :attendances, only: [:create]
   end

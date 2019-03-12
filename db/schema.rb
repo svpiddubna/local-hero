@@ -72,9 +72,9 @@ ActiveRecord::Schema.define(version: 2019_03_11_150543) do
     t.string "first_name"
     t.string "last_name"
     t.string "address"
+    t.string "photo"
     t.float "latitude"
     t.float "longitude"
-    t.string "photo"
     t.integer "votes", default: 0
     t.text "content"
     t.index ["email"], name: "index_users_on_email", unique: true
