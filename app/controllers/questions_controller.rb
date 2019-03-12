@@ -1,10 +1,10 @@
 class QuestionsController < ApplicationController
+  include Mappable
   layout "sidebar_layout", only: [:index, :show]
   before_action :localheroes, only: [:index, :show]
 
   def index
     @questions = Question.all.order(created_at: :desc)
-    map_markers
   end
 
   def show
@@ -12,12 +12,10 @@ class QuestionsController < ApplicationController
     @comment = Comment.new
     # For a comment form
     @post = @question.becomes(Post)
-    map_markers
   end
 
   def new
     @question = Question.new
-    map_markers
   end
 
   def create
@@ -31,14 +29,6 @@ class QuestionsController < ApplicationController
   end
 
   private
-
-  def map_markers
-    if current_user.latitude && current_user.longitude
-      @markers = [{ lng: current_user.longitude, lat: current_user.latitude }]
-    else
-      @markers = []
-    end
-  end
 
   def question_params
     params.require(:question).permit(:title, :content)
