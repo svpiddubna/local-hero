@@ -1,7 +1,7 @@
 <div class="comments-section">
     <p>Responses</p>
   <div class="row">
-    <% task.comments.each do |comment| %>
+    <% post.comments.each do |comment| %>
       <div class="col-xs-12 col-md-12">
         <%= render 'shared/comment', comment: comment %>
       </div>
@@ -13,7 +13,7 @@
       <div>
         <%= simple_form_for([post, comment]) do |f| %>
           <%= f.input :content, label: "Write a response" %>
-          <%= hidden_field_tag :origin_view, "#{controller_name.pluralize}/#{action_name}" %>
+          <%= hidden_field_tag :origin_view, "#{controller_name}/#{action_name}" %>
           <%= f.submit "Post", class: "btn btn-info white-text" %>
         <% end %>
       </div>
