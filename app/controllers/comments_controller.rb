@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   # Use mappable and localheroable concerncs
-
+  include Mappable
+  include Localheroable
   def create
     @post = Post.find(params[:post_id])
     @comment = Comment.new(comment_params)
@@ -28,12 +29,5 @@ class CommentsController < ApplicationController
     @post = @post.becomes(Post) # ensure type for generic comment form
     localheroes # Use concern instead of method duplication
     render params[:origin_view], layout: "sidebar_layout"
-  end
-
-
-  def localheroes
-    # Methods for retrieving top and most recent localheroes
-    @top_localheroes = User.order('votes DESC').limit(3)
-    @recent_localheroes = User.order('created_at DESC').limit(3)
   end
 end
