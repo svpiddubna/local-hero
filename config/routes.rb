@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
-  authenticated :user do
-    root to: 'feeds#index'
-  end
 
   root to: 'pages#home'
   get '/my_posts', to: 'feeds#user_index'

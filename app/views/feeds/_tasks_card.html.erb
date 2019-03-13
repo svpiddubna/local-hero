@@ -3,19 +3,21 @@
 
 
   <div class="card-post-content">
-    <div class="card-post-header">
-      <%= image_tag("task.png", class: "label") %>
-      <h2><%= post.title %></h2>
-    </div>
-    <div class="card-post-body">
-      <p><%= post.content %></p>
+    <div class="card-post-upper-part">
+      <div class="card-post-header">
+        <%= image_tag("task.png", class: "label") %>
+        <h2><%= post.title %></h2>
+      </div>
+      <div class="card-post-body">
+        <p><%= post.content %></p>
+      </div>
     </div>
     <div class="card-post-footer">
 
       <%= cl_image_tag post.user.photo.url(:bright_face), class: "post-show-avatar inline" %>
 
       <div class="dropdown">
-        <span><p><%= post.user.first_name %></p></span>
+        <h5><%= post.user.first_name %></h5>
         <div class="dropdown-content">
           <% if post.user.content.nil? %>
           <p> No information about me currently</p>
