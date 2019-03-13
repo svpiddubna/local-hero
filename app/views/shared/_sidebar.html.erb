@@ -1,9 +1,9 @@
 <div class="card-filter sticky-filter">
-  <h2 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'feeds' && params[:action] == 'index' %>"> <%= link_to "All", feeds_path %> </h2></strong>
-  <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'events'%>"> <%= link_to "Local Events", events_path %> </h3>
-  <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'tasks'%>"> <%= link_to "Help a Neighbour", tasks_path %></h3>
+  <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'feeds' && params[:action] == 'user_index' %>"> <%= link_to "My Posts", my_posts_path %> </h3>
+  <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'feeds' && params[:action] == 'index' %>"> <%= link_to "All Posts", feeds_path %> </h3>
+  <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'tasks'%>"> <%= link_to "Lend A Hand", tasks_path %></h3>
   <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'questions'%>"> <%= link_to "Ask a Neighbour", questions_path %> </h3>
-  <strong><h2 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'feeds' && params[:action] == 'user_index' %>"> <%= link_to "My posts", my_posts_path %> </h2></strong>
+  <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'events'%>"> <%= link_to "Local Events", events_path %> </h3>
 
   <div class="card-map text-dec-none">
     <div class="card-map text-dec-none">
@@ -18,9 +18,10 @@
       <p class="card-map-inside" style="font-size:12px"> There are <%= User.count %> localheroes near you </p>
     </div>
 
-    <div class="flip-card card-leaderboard">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
+
+    <div class="card js-card">
+      <div class="card__wrapper">
+        <div class="card__side is-active">
           <strong><h2 class="card-leaderboard-infos" id="card-leaderboard-info-header">Top localheroes:</h2></strong>
           <ol>
             <% @top_localheroes.each do |localhero| %>
@@ -28,8 +29,7 @@
             <% end %>
           </ol>
         </div>
-
-        <div class="flip-card-back">
+        <div class="card__side card__side--back">
           <strong><h2 class="card-leaderboard-infos" id="card-leaderboard-info-header">Recently joined: </h2></strong>
           <ol>
             <% @recent_localheroes.each do |localhero| %>
@@ -38,6 +38,15 @@
           </ol>
         </div>
       </div>
+      <button id="btn" class="btn btn--flipper">See more</button>
     </div>
+
+
+
+
+
+
+
+
     </div>
   </div>

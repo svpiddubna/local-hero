@@ -17,12 +17,13 @@
   font-size: 40px;
 }
 
-.sticky-button {
-  position: sticky;
+.btn.btn-info {
   top: 26px;
   z-index: 1;
   &.wide-button {
     color: white;
+    width: 170px;
+    height: 38px;
 
   }
     width: 100%;
