@@ -28,6 +28,6 @@ class CommentsController < ApplicationController
                           @post.becomes(type.safe_constantize)
     @post = @post.becomes(Post) # ensure type for generic comment form
     localheroes # Use concern instead of method duplication
-    render params[:origin_view], layout: "sidebar_layout"
+    render params[:origin_view], layout: "sidebar_layout_show"
   end
 end
