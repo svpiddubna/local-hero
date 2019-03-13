@@ -7,8 +7,10 @@
 .nav-link.gold-header {
   color: rgb(237,155,4) ;
 }
-.btn {
-  &:hover {
-    color: white;
-  }
+#btn-leader {
+  background-color: #FDB631;
+  color: white;
+  width: 170px;
+  height: 38px;
 }
+

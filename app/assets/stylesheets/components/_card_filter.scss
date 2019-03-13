@@ -42,13 +42,14 @@
   // align-items: flex-end;
   position: relative;
   font-size: 15px;
-  text-decoration: none !important;
-  &.active-sidebar {
-    background-color: rgba(255,255,255, 0.8);
-  }
+  // text-decoration: none !important;
   &:hover {
-    background-color: rgb(253,169,11);
+    background-color: #FDB631;
   }
+}
+
+.card-filter a:hover{
+  color: white;
 }
 
 .card-filter-inside p {

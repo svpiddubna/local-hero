@@ -18,9 +18,10 @@
       <p class="card-map-inside" style="font-size:12px"> There are <%= User.count %> localheroes near you </p>
     </div>
 
-    <div class="flip-card card-leaderboard">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
+
+    <div class="card js-card">
+      <div class="card__wrapper">
+        <div class="card__side is-active">
           <strong><h2 class="card-leaderboard-infos" id="card-leaderboard-info-header">Top localheroes:</h2></strong>
           <ol>
             <% @top_localheroes.each do |localhero| %>
@@ -28,8 +29,7 @@
             <% end %>
           </ol>
         </div>
-
-        <div class="flip-card-back">
+        <div class="card__side card__side--back">
           <strong><h2 class="card-leaderboard-infos" id="card-leaderboard-info-header">Recently joined: </h2></strong>
           <ol>
             <% @recent_localheroes.each do |localhero| %>
@@ -38,6 +38,15 @@
           </ol>
         </div>
       </div>
+      <button id="btn" class="btn btn--flipper">See more</button>
     </div>
+
+
+
+
+
+
+
+
     </div>
   </div>

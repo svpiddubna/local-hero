@@ -1,9 +1,21 @@
-var card = document.getElementById('card');
+let cardTransitionTime = 500;
 
-const Flipper = () => {
-  document.getElementById('flip').addEventListener('click', function() {
-    card.classList.toggle('flipped');
-}, false);
-};
+let $card = $('.js-card')
+let switching = false
 
-export { Flipper };
+$('#btn').click(flipCard)
+
+function flipCard () {
+   if (switching) {
+      return false
+   }
+   switching = true
+
+   $card.toggleClass('is-switched')
+   window.setTimeout(function () {
+      $card.children().children().toggleClass('is-active')
+      switching = false
+   }, cardTransitionTime / 2)
+}
+
+export {flipCard};
