@@ -45,17 +45,20 @@
   // text-decoration: none !important;
   &:hover {
     background-color: #FDB631;
+    a {
+    color: white !important;
+    }
   }
+  &.last {
+    margin-bottom: 5px;
+  }
+
 }
 
-.card-filter a:hover{
-  color: white;
-}
+// .card-filter a:hover{
+//   color: white;
+// }
 
-.card-filter-inside p {
-  color: black;
-  background-color: white;
-}
 
 
 #card-filter-info-header {
