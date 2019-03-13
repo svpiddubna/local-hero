@@ -57,12 +57,37 @@
 }
 
 .gridcontainer {
-
+ text-align: center;
+ padding: 16px;
+  p {
+    font-weight: bolder;
+    padding: 5px 0;
+    margin-bottom: 0;
+    padding-right: 10px;
+  }
+ i {
+    padding-left: 6px;
+    color: #bababa;
+    font-size: 18px;
+  }
 }
 
 
 .event-information {
   display: flex;
+  justify-content: space-between;
+}
+
+.event-information2 {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.event-information3 {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -76,8 +101,8 @@
 }
 
 .event-show-avatar {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
@@ -90,7 +115,7 @@
 
 .date-card {
   background-color: #FDA90B;
-  color: white;
+  color: white !important;
   width: 100px;
   text-align: center;
   height: 50px;
@@ -103,4 +128,8 @@
   position: absolute;
   top: 162px;
   left: 30px;
+}
+
+.date-card p {
+  color: white;
 }
