@@ -37,15 +37,10 @@
   justify-content: space-between;
   // align-items: center;
   padding: 15px;
-  // &.event {
-  //   height: 200px;
-  // }
-  // &.task {
-  //   height: 200px;
-  // }
-  // &.question {
-  //   height: 180px;
-  // }
+
+    &.task, &.question, &.event{
+      margin-left:30px;
+    }
 }
 
 .card-post:hover {
