@@ -5,7 +5,9 @@
      <!--  <img src="https://cdn3.iconfinder.com/data/icons/human-behaviour-and-situations-part-1/400/Popular-19-512.png" alt="Logo" class="logo"> --><span class="local-hero">Local Hero</span>
     </div>
     <div>
+      <% unless user_signed_in? %>
       <span><%= link_to "Login", new_user_session_path, class: "landing-login" %></span>
+      <% end %>
     </div>
 
   </div>
