@@ -4,7 +4,7 @@ module Mappable
   extend ActiveSupport::Concern
 
   included do
-    before_action :map_markers, only: [:index, :new, :show]
+    before_action :map_markers, only: [:index, :new, :show, :user_index]
   end
 
   protected
