@@ -9,7 +9,7 @@
       <strong><%= f.input :content, :label => "Description" %></strong>
       <%= f.input :photo, input_html: { class: 'hidden' }, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
       <%= f.input :photo_cache, as: :hidden %>
-      <%= f.submit :submit, class: "btn btn-info" %>
+      <%= f.submit :submit, class: "btn btn-info", value: "Submit" %>
     <% end %>
     </div>
   </div>
