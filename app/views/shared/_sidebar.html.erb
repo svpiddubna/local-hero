@@ -19,34 +19,15 @@
     </div>
 
 
-    <div class="card js-card">
-      <div class="card__wrapper">
-        <div class="card__side is-active">
+    <div class="card-map text-dec-none">
+      <div class="card-map text-dec-none">
           <strong><h2 class="card-leaderboard-infos" id="card-leaderboard-info-header">Top localheroes:</h2></strong>
           <ol>
             <% @top_localheroes.each do |localhero| %>
             <li><strong><%= localhero.first_name %> <%= localhero.last_name %></strong> : <%= localhero.votes %> votes</li>
             <% end %>
           </ol>
-        </div>
-        <div class="card__side card__side--back">
-          <strong><h2 class="card-leaderboard-infos" id="card-leaderboard-info-header">Recently joined: </h2></strong>
-          <ol>
-            <% @recent_localheroes.each do |localhero| %>
-            <li><strong><%= localhero.first_name %> <%= localhero.last_name %></strong></li>
-            <% end %>
-          </ol>
-        </div>
       </div>
-      <button id="btn" class="btn btn--flipper">See more</button>
-    </div>
-
-
-
-
-
-
-
-
     </div>
   </div>
+</div>
