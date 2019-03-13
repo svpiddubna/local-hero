@@ -1,9 +1,9 @@
 <div class="card-filter sticky-filter">
-  <h2 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'feeds' && params[:action] == 'index' %>"> <%= link_to "All", feeds_path %> </h2></strong>
-  <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'events'%>"> <%= link_to "Local Events", events_path %> </h3>
-  <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'tasks'%>"> <%= link_to "Help a Neighbour", tasks_path %></h3>
+  <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'feeds' && params[:action] == 'user_index' %>"> <%= link_to "My Posts", my_posts_path %> </h3>
+  <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'feeds' && params[:action] == 'index' %>"> <%= link_to "All Posts", feeds_path %> </h3>
+  <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'tasks'%>"> <%= link_to "Lend A Hand", tasks_path %></h3>
   <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'questions'%>"> <%= link_to "Ask a Neighbour", questions_path %> </h3>
-  <strong><h2 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'feeds' && params[:action] == 'user_index' %>"> <%= link_to "My posts", my_posts_path %> </h2></strong>
+  <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'events'%>"> <%= link_to "Local Events", events_path %> </h3>
 
   <div class="card-map text-dec-none">
     <div class="card-map text-dec-none">
