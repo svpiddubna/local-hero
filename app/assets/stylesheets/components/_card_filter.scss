@@ -45,14 +45,15 @@
   // text-decoration: none !important;
   &:hover {
     background-color: #FDB631;
-    a {
     color: white !important;
-    }
   }
   &.last {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
-
+  &.active-sidebar {
+    background-color: #FDB631;
+    color: white !important;
+  }
 }
 
 // .card-filter a:hover{
