@@ -1,5 +1,5 @@
 <div class="navbar bg-white py-2 px-3">
-    <%= link_to root_path, class: "navbar-logo" do %>
+    <%= link_to feeds_path, class: "navbar-logo" do %>
     <div class="nav-bar-right d-flex align-items-center justify-content-around pad">
       <%= image_tag "logo.png", height: 50 %>
       <h3 class="local-hero">Local Hero</h3>
@@ -12,7 +12,7 @@
 
     <div class="d-inline-flex justify-content-around" style="width: 100px">
 
-        <%= link_to "#", class: "px-3 d-none d-sm-block" do %>
+        <%= link_to root_path, class: "px-3 d-none d-sm-block" do %>
           <i class="fas fa-user"></i>
         <% end %>
 
