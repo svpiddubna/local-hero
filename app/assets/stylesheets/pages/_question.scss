@@ -31,20 +31,26 @@
   }
 }
 .question-card-avatar {
-  margin: 8px 0;
-  padding: 16px 16px;
+  padding: 16px 30px;
   p {
     font-weight: bolder;
     text-align: center;
     padding: 5px 0;
     margin-bottom: 0;
   }
+  i {
+    padding-left: 6px;
+    color: #bababa;
+    font-size: 18px;
+  }
 }
 .question-card-footer {
-  padding: 0 16px;
+  padding: 0 16px 16px 16px;
   p {
     font-size: 14px;
     color: #CCCCCC;
+    margin-bottom: 0;
+    text-align: right;
   }
 }
 
