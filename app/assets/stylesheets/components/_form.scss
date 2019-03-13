@@ -1,9 +1,14 @@
 .editor-wrap .form-control {
   height: 40px;
-  width: 670px;
+  width: 662px;
   margin-right: 10px;
 }
 
 .nav-link.gold-header {
   color: rgb(237,155,4) ;
+}
+.btn {
+  &:hover {
+    color: white;
+  }
 }
