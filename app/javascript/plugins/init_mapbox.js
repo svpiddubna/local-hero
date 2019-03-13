@@ -30,6 +30,20 @@ const addMarkersToMap = (map, markers) => {
   });
 };
 
+const addLocationMarkersToMap = (map, markers) => {
+  markers.forEach((marker) => {
+    const element = document.createElement('div');
+    element.className = 'marker';
+    element.style.backgroundImage = `url(${marker.image_url})`;
+    element.style.backgroundSize = 'contain';
+    element.style.width = '33px';
+    element.style.height = '33px';
+
+    new mapboxgl.Marker(element)
+    .setLngLat([ marker.lng, marker.lat ])
+    .addTo(map);
+  });
+};
 
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
@@ -76,7 +90,7 @@ const initMapbox = () => {
     const map = buildMap();
     const markers = JSON.parse(mapElement.dataset.markers);
     const eventmarkers = JSON.parse(mapElement.dataset.eventmarkers);
-    // addMarkersToMap(map, markers);
+    addLocationMarkersToMap(map, markers);
     addMarkersToMap(map, eventmarkers);
     fitMapToMarkers(map, markers);
     drawCircleRadius(map, markers[0]);
