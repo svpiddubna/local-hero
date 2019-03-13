@@ -6,7 +6,7 @@
       <%= simple_form_for(@question) do |f| %>
       <strong><%= f.input :title %></strong>
       <strong><%= f.input :content, :label => "Description" %></strong>
-      <%= f.submit :submit, class: "btn btn-info" %>
+      <%= f.submit :submit, class: "btn btn-info", value: "Submit" %>
     <% end %>
     </div>
   </div>
