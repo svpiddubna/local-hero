@@ -11,7 +11,6 @@
     <div class="card-post-footer-question">
       <div class="card-post-footer">
         <%= cl_image_tag post.user.photo.url(:bright_face), class: "post-show-avatar inline" %>
-
         <div class="dropdown">
           <h5><%= post.user.first_name %></h5>
           <div class="dropdown-content">
@@ -22,13 +21,12 @@
             <% end %>
           </div>
         </div>
-
+      </div>
+      <div class="card-post-photo answer-position">
+       <p><%= post.comments.count %> answers</p>
      </div>
    </div>
  </div>
-        <div class="card-post-photo answer-position">
-         <p><%= post.comments.count %> answers
-         </p>
-       </div>
+
 </div>
 <% end %>
