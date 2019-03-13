@@ -17,17 +17,11 @@
   font-size: 40px;
 }
 
-// .btn.btn-info {
-//   top: 26px;
-//   z-index: 1;
-//   &.wide-button {
-//     color: white;
-//     width: 170px;
-//     height: 38px;
-
-//   }
-//     width: 100%;
-// }
+.btn.btn-info {
+  &.wide-button {
+    color: white;
+  }
+}
 
 .sticky-filter {
   position: sticky;

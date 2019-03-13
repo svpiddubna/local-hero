@@ -3,43 +3,43 @@
   <div class="date-card">
     <p><i class="fas fa-calendar-day"></i><strong><%= @event.starts_at.to_time.strftime('%B %e') %></strong></p>
   </div>
-  <div class="event-information">
-    <div class="event-card-body">
-      <h4><%= @event.title %></h4>
-      <p><i class="fas fa-map-marker-alt"></i>&nbsp<%= @event.address %></p>
-      <p><i class="far fa-clock"></i><%= @event.starts_at.to_time.strftime('%l:%M %p') %></p>
-      <% if @event_attendance %>
-        <%= link_to attendance_path(@event_attendance), class: "going", method: :delete do %>
-        Going <i class="fas fa-check check-green"></i>
-        <% end %>
-      <% else %>
-        <p><%= link_to "I am going!", event_attendances_path(@event), class: "btn btn-info white-text", method: :post %></p>
-      <% end %>
-  </div>
-
-    <div class="event-show-right-side">
-      <div class="gridcontainer">
-      <%= cl_image_tag @event.user.photo.url(:bright_face), class: "event-show-avatar" %>
-      <strong><%= @event.user.first_name %>
-        <%= @event.user.last_name %></strong>
-      &nbsp
-      <%= render 'shared/upvote', comment: @event %>
+  <div class="event-information3">
+    <div class="event-information">
+      <div class="event-card-body">
+        <h4><%= @event.title %></h4>
+        <p><i class="fas fa-map-marker-alt"></i>&nbsp<%= @event.address %></p>
+        <p><i class="far fa-clock"></i><%= @event.starts_at.to_time.strftime('%l:%M %p') %></p>
     </div>
 
-    <br>
-    <br>
-    <br>
-    <div class="event-attendances">
-      <p><strong><%= @event.participants.count %></strong> neighbours are going</p>
-    </div>
-  </div>
-</div>
+        <div class="gridcontainer">
+          <%= cl_image_tag @event.user.photo.url(:bright_face), class: "event-show-avatar" %>
+          <%= @event.user.first_name %>
+          <p><%= @event.user.votes %> &nbsp<i class="fas fa-thumbs-up"></i></p>
+      </div>
 
+    </div>
+    <div class="event-information2">
+          <% if @event_attendance %>
+            <%= link_to attendance_path(@event_attendance), class: "going", method: :delete do %>
+            Going <i class="fas fa-check check-green"></i>
+            <% end %>
+          <% else %>
+            <p><%= link_to "I am going!", event_attendances_path(@event), class: "btn btn-info white-text", method: :post %></p>
+          <% end %>
+        <br>
+        <br>
+        <br>
+        <div class="event-attendances">
+          <p><strong><%= @event.participants.count %></strong> neighbours are going</p>
+        </div>
+
+    </div>
 </div>
-<div class="event-card-2">
-  <div class="event-card-header">
-    <p>Details</p>
   </div>
-  <p><%= @event.content %></p>
-</div>
-<%= render 'shared/comments_section', comment: @comment, post: @post %>
+  <div class="event-card-2">
+    <div class="event-card-header">
+      <p>Details</p>
+    </div>
+    <p><%= @event.content %></p>
+  </div>
+  <%= render 'shared/comments_section', comment: @comment, post: @post %>

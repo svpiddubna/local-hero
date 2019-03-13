@@ -27,6 +27,11 @@
   // align-items: center;
   padding: 16px;
 
+
+    &.task, &.question, &.event{
+      margin-left:30px;
+    }
+
 }
 
 .card-post:hover {
