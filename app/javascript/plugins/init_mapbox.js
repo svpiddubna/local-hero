@@ -90,8 +90,8 @@ const initMapbox = () => {
     const map = buildMap();
     const markers = JSON.parse(mapElement.dataset.markers);
     const eventmarkers = JSON.parse(mapElement.dataset.eventmarkers);
-    addLocationMarkersToMap(map, markers);
     addMarkersToMap(map, eventmarkers);
+    addLocationMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
     drawCircleRadius(map, markers[0]);
   }
