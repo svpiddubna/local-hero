@@ -20,7 +20,9 @@
           <% else %>
           <p><%= @event.user.first_name %></p>
           <% end %>
-          <p><%= @event.user.votes %> &nbsp<i class="fas fa-thumbs-up"></i></p>
+          <div class="all-cards-upvote">
+            <%= render 'shared/upvote', comment: @event %>
+          </div>
       </div>
 
     </div>
