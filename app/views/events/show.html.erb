@@ -22,15 +22,12 @@
     </div>
     <div class="event-information2">
           <% if @event_attendance %>
-            <%= link_to attendance_path(@event_attendance), class: "going", method: :delete do %>
-            Going <i class="fas fa-check check-green"></i>
+            <%= link_to attendance_path(@event_attendance), class: "btn btn-info white-text", method: :delete do %>
+            You're going <i class="fas fa-check check-green"></i>
             <% end %>
           <% else %>
             <p><%= link_to "I am going!", event_attendances_path(@event), class: "btn btn-info white-text", method: :post %></p>
           <% end %>
-        <br>
-        <br>
-        <br>
         <div class="event-attendances">
           <p><strong><%= @event.participants.count %></strong> neighbours are going</p>
         </div>
