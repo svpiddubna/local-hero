@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
   include Mappable
   include Localheroable
 
-  layout :resolve_layout
+  layout "sidebar_layout_show"
 
   def index
     @questions = Question.all.order(created_at: :desc)

@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   include Mappable
   include Localheroable
 
-  layout :resolve_layout
+  layout "sidebar_layout_show"
 
   before_action :set_task, only: [:update, :show]
 
