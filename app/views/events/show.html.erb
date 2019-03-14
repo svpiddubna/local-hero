@@ -22,7 +22,7 @@
     </div>
     <div class="event-information2">
           <% if @event_attendance %>
-            <%= link_to attendance_path(@event_attendance), class: "btn btn-info white-text", method: :delete do %>
+            <%= link_to attendance_path(@event_attendance), class: "btn btn-info white-text ticked", method: :delete do %>
             You're going <i class="fas fa-check check-green"></i>
             <% end %>
           <% else %>
