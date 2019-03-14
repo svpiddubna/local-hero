@@ -1,9 +1,15 @@
   <div class="row">
     <div class="col-xs-12 col-md-12">
       <div class="question-card">
+
         <div class="question-card-avatar">
           <%= cl_image_tag @question.user.photo.url(:bright_face), class: "post-show-avatar" %>
+          <% if @question.user.votes >= 30 %>
+          <p><%= @question.user.first_name %>🏆</p>
+          <% else %>
           <p><%= @question.user.first_name %></p>
+          <% end %>
+
           <p><%= @question.user.votes %><i class="fas fa-thumbs-up"></i></p>
         </div>
 

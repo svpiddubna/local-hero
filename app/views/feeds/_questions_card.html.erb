@@ -12,7 +12,11 @@
       <div class="card-post-footer">
         <%= cl_image_tag post.user.photo.url(:bright_face), class: "post-show-avatar inline" %>
         <div class="dropdown">
+          <% if post.user.votes >= 30 %>
+          <h5><%= post.user.first_name %>🏆</h5>
+          <% else %>
           <h5><%= post.user.first_name %></h5>
+          <% end %>
           <div class="dropdown-content">
             <% if post.user.content.nil? %>
             <p> No information about me currently</p>
