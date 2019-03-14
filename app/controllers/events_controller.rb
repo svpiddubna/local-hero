@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   include Mappable
   include Localheroable
 
-  layout "sidebar_layout_show"
+  layout "sidebar_layout_show", only: [:show, :index]
 
   def index
     @events = Event.order(created_at: :desc)
