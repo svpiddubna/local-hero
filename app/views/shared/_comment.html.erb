@@ -1,8 +1,16 @@
 <div class="comment-card">
   <div class="comment-card-avatar">
     <%= cl_image_tag comment.user.photo.url(:bright_face), class: "post-show-avatar" %>
+    <% if comment.user.votes >= 30 %>
+    <p><%= comment.user.first_name %><span>🏆</span></p>
+    <% else %>
     <p><%= comment.user.first_name %></p>
+
+    <% end %>
+    
+
     <div class="all-cards-upvote">
+
 
       <%= render 'shared/upvote', comment: comment %>
     </div>

@@ -51,8 +51,6 @@
   }
 }
 
-
-
 .text-dec-none {
   color: #3f3f3f;
   text-decoration: none;
@@ -61,7 +59,7 @@
       text-decoration: none;
     }
    ol {
-    padding: 0px 10px;
+    padding: 0px 0px;
     counter-reset: list;
     list-style: none;
    }
@@ -82,7 +80,6 @@
      margin-right: 1em;
    }
 }
-
 
 .post-show-avatar {
   width: 40px;
