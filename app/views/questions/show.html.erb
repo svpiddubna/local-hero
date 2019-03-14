@@ -10,14 +10,9 @@
           <p><%= @question.user.first_name %></p>
 
           <% end %>
-
-
             <div class="all-cards-upvote">
               <%= render 'shared/upvote', comment: @question %>
             </div>
-
-
-          <p><%= @question.user.votes %><i class="fas fa-thumbs-up"></i></p>
         </div>
 
         <div class="question-card-content">
