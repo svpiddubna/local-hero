@@ -9,9 +9,6 @@
           <% else %>
           <p><%= @task.user.first_name %></p>
           <% end %>
-          <div class="all-cards-upvote">
-              <%= render 'shared/upvote', comment: @task %>
-          </div>
         </div>
 
         <div class="task-card-content">
