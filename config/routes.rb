@@ -18,4 +18,5 @@
 
   resources :attendances, only: [:destroy]
   resources :notifications, only: [:update]
+
 end
