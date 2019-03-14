@@ -24,7 +24,7 @@
 .event-card-1 .event-card-body {
   padding: 16px 16px;
   p {
-
+   margin: 3px 0 0 0;
   }
   h4 {
     font-weight: bolder;
@@ -136,4 +136,8 @@
 
 .date-card p {
   color: white;
+}
+
+.event-card-address {
+  padding-top: 10px;
 }
