@@ -5,18 +5,21 @@
           <%= cl_image_tag @question.user.photo.url(:bright_face), class: "post-show-avatar" %>
           <p><%= @question.user.first_name %></p>
           <p><%= @question.user.votes %><i class="fas fa-thumbs-up"></i></p>
-
         </div>
+
         <div class="question-card-content">
           <div class="question-card-header">
             <p><%= @question.title %></p>
           </div>
+
           <div class="question-card-body">
             <p><%= @question.content %></p>
           </div>
+
           <div class="question-card-footer">
             <p>Posted <%= @question.created_at.to_formatted_s(:long_ordinal) %></p>
           </div>
+
         </div>
         <!-- <div class="question-card-upvote">
           <i class="far fa-thumbs-up"></i>
