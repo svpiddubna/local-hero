@@ -18,4 +18,5 @@ Rails.application.routes.draw do
 
   resources :attendances, only: [:destroy]
   resources :notifications, only: [:update]
+
 end
