@@ -1,0 +1,5 @@
+meta_product_name: "Local Hero"
+meta_title: "Local Hero - Stronger communities with your neighbours"
+meta_description: "Local Hero is a platform that helps to connect local communities"
+meta_image: "logo.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
