@@ -13,7 +13,7 @@
 
         <div class="gridcontainer">
           <%= cl_image_tag @event.user.photo.url(:bright_face), class: "event-show-avatar" %>
-          <%= @event.user.first_name %>
+          <p><%= @event.user.first_name %></p>
           <p><%= @event.user.votes %> &nbsp<i class="fas fa-thumbs-up"></i></p>
       </div>
 
@@ -38,7 +38,7 @@
   </div>
   <div class="event-card-2">
     <div class="event-card-header">
-      <p>Details</p>
+      <h5>Details</h5>
     </div>
     <p><%= @event.content %></p>
   </div>
