@@ -13,7 +13,7 @@
         <%= cl_image_tag post.user.photo.url(:bright_face), class: "post-show-avatar inline" %>
         <div class="dropdown">
           <% if post.user.votes >= 30 %>
-          <h5><%= post.user.first_name %>🏆</h5>
+          <h5><%= post.user.first_name %><span>🏆</span></h5>
           <% else %>
           <h5><%= post.user.first_name %></h5>
           <% end %>

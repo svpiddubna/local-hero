@@ -5,7 +5,7 @@
         <div class="question-card-avatar">
           <%= cl_image_tag @question.user.photo.url(:bright_face), class: "post-show-avatar" %>
           <% if @question.user.votes >= 30 %>
-          <p><%= @question.user.first_name %>🏆</p>
+          <p><%= @question.user.first_name %><span>🏆</span></p>
           <% else %>
           <p><%= @question.user.first_name %></p>
           <% end %>
