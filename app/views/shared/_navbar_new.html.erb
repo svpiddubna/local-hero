@@ -27,7 +27,9 @@
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
           <% if current_user.notifications.unread.present? %>
             <% current_user.notifications.unread.each do |n| %>
-              <%= link_to "#{n.actor.first_name} #{n.action} on your #{n.post.type.downcase}", notification_path(n), method: :patch, class: "dropdown-item" %>
+              <%= link_to notification_path(n), method: :patch, class: "dropdown-item" do %>
+                <i class='far fa-comment'></i> <%= n.actor.first_name %> <%= n.action %> on your <%= n.post.type.downcase %>
+            <% end %>
             <% end %>
             <% else %>
             <%= link_to "You don't have any notifications", "#", class: "dropdown-item" %>
