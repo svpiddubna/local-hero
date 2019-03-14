@@ -5,8 +5,12 @@
     <p><%= comment.user.first_name %><span>🏆</span></p>
     <% else %>
     <p><%= comment.user.first_name %></p>
+
     <% end %>
-    <div class="comment-card-upvote">
+    
+
+    <div class="all-cards-upvote">
+
 
       <%= render 'shared/upvote', comment: comment %>
     </div>

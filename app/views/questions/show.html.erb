@@ -8,7 +8,14 @@
           <p><%= @question.user.first_name %><span>🏆</span></p>
           <% else %>
           <p><%= @question.user.first_name %></p>
+
           <% end %>
+
+
+            <div class="all-cards-upvote">
+              <%= render 'shared/upvote', comment: @question %>
+            </div>
+
 
           <p><%= @question.user.votes %><i class="fas fa-thumbs-up"></i></p>
         </div>
