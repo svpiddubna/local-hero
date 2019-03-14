@@ -7,9 +7,10 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @comment.post = @post
     @comment.user = current_user
+
     if @comment.save
       @comment.notify!(current_user)
-      redirect_to determine_post_path(@post)
+      redirect_to helpers.determine_post_path(@post)
     else
       rerender_original_show
     end
