@@ -4,9 +4,13 @@
       <div class="task-card-left">
         <div class="task-card-avatar">
           <%= cl_image_tag @task.user.photo.url(:bright_face), class: "post-show-avatar" %>
+          <% if @task.user.votes >= 30 %>
+          <p><%= @task.user.first_name %><span>🏆</span></p>
+          <% else %>
           <p><%= @task.user.first_name %></p>
-          <p><%= @task.user.votes %></p>
+          <% end %>
         </div>
+
         <div class="task-card-content">
           <div class="task-card-header">
             <p><%= @task.title %></p>

@@ -15,7 +15,11 @@
 
         <div class="gridcontainer">
           <%= cl_image_tag @event.user.photo.url(:bright_face), class: "event-show-avatar" %>
+          <% if @event.user.votes >= 30 %>
+          <p><%= @event.user.first_name %><span>🏆</span></p>
+          <% else %>
           <p><%= @event.user.first_name %></p>
+          <% end %>
           <p><%= @event.user.votes %> &nbsp<i class="fas fa-thumbs-up"></i></p>
       </div>
 

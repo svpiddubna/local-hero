@@ -35,8 +35,14 @@
 
 .btn-info {
   color: white;
+  &:hover {
+  color: white;
+  }
+  &:active {
+  color: white;
+  }
 }
 
-.btn-info:hover {
-  color: white;
-}
+// .btn-info:hover {
+//   color: white;
+// }

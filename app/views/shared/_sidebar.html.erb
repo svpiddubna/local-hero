@@ -2,15 +2,15 @@
 
   <%= link_to my_posts_path do %>
     <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'feeds' && params[:action] == 'user_index' %>">
-     My Posts</h3>
+     My Stuff</h3>
   <% end %>
 
   <%= link_to feeds_path do %>
-    <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'feeds' && params[:action] == 'index' %>">All Posts</h3>
+    <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'feeds' && params[:action] == 'index' %>">All Activity</h3>
   <% end %>
 
   <%= link_to  tasks_path do %>
-    <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'tasks'%>">Lend A Hand</h3>
+    <h3 class="card-filter-inside <%= 'active-sidebar' if params[:controller] == 'tasks'%>">Lend a Hand</h3>
   <% end %>
 
   <%= link_to questions_path do %>
@@ -40,7 +40,7 @@
           <strong><h2 class="card-leaderboard-infos" id="card-leaderboard-info-header">Top localheroes:</h2></strong>
           <ol>
             <% @top_localheroes.each do |localhero| %>
-            <li><strong><%= localhero.first_name %> <%= localhero.last_name %></strong> : <%= localhero.votes %> votes</li>
+            <li><strong><%= localhero.first_name %> </strong> : <%= localhero.votes %> points</li>
             <% end %>
           </ol>
       </div>
