@@ -1,11 +1,11 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 70px 0;
+  padding: 30px 0;
 }
 
 .banner h1 {
-  margin: 0;
+  margin-top: 140px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 38px;
@@ -20,6 +20,17 @@
 
 .banner h3 {
   color: white;
+}
+
+.banner a {
+  font-size: 20px;
+  color: white;
+}
+
+.banner a:hover {
+  text-decoration: none !important;
+  color: white;
+  background-color: #fdb631;
 }
 
 .landing-text {
@@ -50,13 +61,7 @@
   font-size: 60px;
 }
 
-.how-it-works {
-  text-align: center;
-  width: 100%;
-  margin: 0;
-  position: relative;
-  bottom: -70px;
-}
+
 
 #landing-title {
   font-size: 45px;

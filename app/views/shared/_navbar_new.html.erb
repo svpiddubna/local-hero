@@ -7,10 +7,10 @@
     <% end %>
 
   <div class="nav-bar-right d-flex align-items-center justify-content-around" style="width: 360px" >
+    <% if user_signed_in? %>
     <div class="button-right">
         <%= link_to "Howdy Neighbours", new_task_path, class: "btn btn-info wide-button" %>
         </div>
-    <% if user_signed_in? %>
 
     <div class="d-inline-flex justify-content-around" style="width: 100px">
 

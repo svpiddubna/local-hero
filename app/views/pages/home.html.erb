@@ -1,17 +1,14 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1528605248644-14dd04022da1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
-  <div class="container-fluid">
-    <div class="navbar-landing">
-      <div>
-        <span class="local-hero">Local Hero</span>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1528605248644-14dd04022da1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+      <div class="navbar-landing">
+          <div class="local-hero">Local Hero</div>
+        <div>
+          <% unless user_signed_in? %>
+          <span><%= link_to "Login", new_user_session_path, class: "landing-login" %></span>
+          <% end %>
+        </div>
       </div>
-      <div>
-        <% unless user_signed_in? %>
-        <span><%= link_to "Login", new_user_session_path, class: "landing-login" %></span>
-        <% end %>
-      </div>
-    </div>
-</div>
- <!--  <div class="container"> -->
+
+
     <div class="row">
       <div class="landing-text col-md-6 offset-md-3">
 
@@ -21,30 +18,39 @@
 
       </div>
     </div>
-  <!-- </div> -->
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
+      <div class="icon-card left-card">
+        <div class="icon-card-header-flex">
+          <%= image_tag "connect.png", class: "info-icon" %>
+          <span class="icon-card-header">Connect</span>
+        </div>
+        <div class="icon-card-content">Discover content only from people within 1 km of your home
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="icon-card center-card">
+        <div class="icon-card-header-flex">
+          <%= image_tag "reachout.png", class: "info-icon" %>
+          <span class="icon-card-header">Reach out</span>
+        </div>
+        <div class="icon-card-content"> Hosting a local get-together? Need a hand?Unsure about something?</div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="icon-card right-card">
+        <div class="icon-card-header-flex">
+          <%= image_tag "reputation.png", class: "info-icon" %>
+          <span class="icon-card-header">Earn a reputation</span>
+        </div>
+        <div class="icon-card-content">Upvote good samaritans or become a local hero in your community</div>
+      </div>
+      </div>
+    </div>
+  </div>
+
 </div>
-    <div class="row how-it-works">
-      <div class="col icon-card left-card">
-          <div class="icon-card-header-flex">
-            <%= image_tag "connect.png", class: "info-icon" %>
-            <span class="icon-card-header">Connect</span>
-          </div>
-          <div class="icon-card-content">Discover content only from people within 1 km of your home</div>
-        </div>
-        <div class="col icon-card center-card">
-            <div class="icon-card-header-flex">
-              <%= image_tag "reachout.png", class: "info-icon" %>
-              <span class="icon-card-header">Reach out</span>
-            </div>
-            <div class="icon-card-content"> Hosting a local get-together? Need a hand?Unsure about something?</div>
-          </div>
-          <div class="col icon-card right-card">
-            <div class="icon-card-header-flex">
-              <%= image_tag "reputation.png", class: "info-icon" %>
-              <span class="icon-card-header">Earn a reputation</span>
-            </div>
-            <div class="icon-card-content">Upvote good samaritans or become a local hero in your community</div>
-          </div>
-        </div>
-
-
